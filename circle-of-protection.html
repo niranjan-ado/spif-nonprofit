@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html data-theme="system" lang="en-IN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Circle of Protection | Instagram Partnership | SPIF</title>
+<meta content="Circle of Protection is SPIF's national campaign in partnership with Instagram — building conversations around resilience, help-seeking, and digital well-being among India's young people." name="description"/>
+<meta content="index, follow" name="robots"/>
+<meta content="#fafaf9" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="#0f172a" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<meta content="Circle of Protection | SPIF × Instagram" property="og:title"/>
+<meta content="A national campaign for adolescents and young adults — building conversations around the protective factors that keep young people safe." property="og:description"/>
+<meta content="https://spif.in/assets/images/about-suicide-spif.jpg" property="og:image"/>
+<meta content="https://spif.in/circle-of-protection" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="Suicide Prevention India Foundation" property="og:site_name"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Circle of Protection | SPIF × Instagram" name="twitter:title"/>
+<meta content="A national campaign for adolescents and young adults — building conversations around protective factors and mental well-being." name="twitter:description"/>
+<meta content="https://spif.in/assets/images/about-suicide-spif.jpg" name="twitter:image"/>
+<meta content="en_IN" property="og:locale"/>
+<link href="https://spif.in/circle-of-protection" rel="canonical"/>
+
+<script>
+    (function() {
+        var saved = localStorage.getItem('spif-theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    })();
+</script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Campaign",
+    "name": "Circle of Protection",
+    "url": "https://spif.in/circle-of-protection",
+    "description": "A national mental health campaign by SPIF in partnership with Instagram focused on protective factors for youth.",
+    "creator": {
+        "@type": "Organization",
+        "name": "Suicide Prevention India Foundation"
+    },
+    "sponsor": {
+        "@type": "Organization",
+        "name": "Instagram"
+    },
+    "audience": {
+        "@type": "Audience",
+        "audienceType": "Adolescents and young adults"
+    },
+    "inLanguage": "en-IN"
+}
+</script>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+
+<noscript>
+</noscript>
+
+<script>
+    setTimeout(function() {
+        var hiddenElements = document.querySelectorAll('[data-reveal]');
+        for (var i = 0; i < hiddenElements.length; i++) {
+            hiddenElements[i].style.opacity = '1';
+            hiddenElements[i].style.transform = 'none';
+            hiddenElements[i].style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+        }
+    }, 2500);
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&amp;display=swap" rel="stylesheet"/></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&amp;display=swap" rel="stylesheet"/></noscript>
+<link href="/assets/css/main.css?v=2" rel="stylesheet"/>
+<link href="/assets/images/icons/favicon.ico" rel="icon" sizes="32x32"/>
+<link href="/assets/images/icons/icon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/assets/images/icons/apple-touch-icon.png" rel="apple-touch-icon"/>
+
+<style>
+    /* ── Stat bar ── */
+    .cop-stat-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-md); }
+    .cop-stat-grid > .stat-item { flex: 1 1 180px; max-width: 260px; }
+    .stat-item { background: var(--bg-surface); border: 1px solid rgba(150,150,150,0.1); border-radius: var(--radius-lg); padding: var(--space-md); text-align: center; box-shadow: var(--shadow-sm); }
+    .stat-item__number { font-size: var(--text-2xl); font-weight: 800; color: var(--brand-primary); letter-spacing: -0.03em; line-height: 1; margin-bottom: 0.4rem; }
+    .stat-item__label { font-size: var(--text-xs); color: var(--text-secondary); font-weight: 500; line-height: 1.4; }
+
+    /* ── Protective factor cards ── */
+    .factor-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-md); padding: 4px; margin: -4px; }
+    .factor-grid > .factor-card { flex: 1 1 220px; max-width: 320px; }
+    .factor-card { background: var(--bg-surface); border: 1px solid rgba(150,150,150,0.1); border-radius: var(--radius-lg); padding: var(--space-lg); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 0.75rem; text-decoration: none; transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast); }
+    .factor-card__icon { width: 44px; height: 44px; border-radius: var(--radius-md); background: color-mix(in srgb, var(--brand-accent) 10%, var(--bg-subtle)); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .factor-card__icon .material-symbols-rounded { font-size: 1.4rem; color: var(--brand-accent); }
+    .factor-card__title { font-size: var(--text-base); font-weight: 700; color: var(--text-primary); line-height: 1.25; transition: color var(--transition-fast); }
+    .factor-card__desc { font-size: var(--text-sm); color: var(--text-secondary); line-height: 1.6; margin: 0; }
+    
+    @media (hover: hover) {
+        .factor-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-premium); border-color: var(--brand-primary); }
+        .factor-card:hover .factor-card__title { color: var(--brand-primary); }
+    }
+
+    /* ── Instagram CTA band ── */
+    .ig-band { background: var(--bg-surface); border: 1px solid rgba(150,150,150,0.1); border-radius: var(--radius-xl); padding: var(--space-lg) var(--space-xl); display: flex; flex-direction: column; align-items: center; gap: var(--space-sm); text-align: center; box-shadow: var(--shadow-sm); }
+    .ig-band__handle { font-size: var(--text-lg); font-weight: 800; color: var(--text-primary); letter-spacing: -0.01em; }
+    .ig-band__sub { font-size: var(--text-sm); color: var(--text-secondary); max-width: 42ch; line-height: 1.5; }
+
+    /* ── Partnership badge ── */
+    .partnership-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--bg-surface); border: 1px solid rgba(150,150,150,0.15); border-radius: var(--radius-pill); padding: 0.4rem 1rem; font-size: var(--text-xs); font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.06em; box-shadow: var(--shadow-sm); }
+
+    /* ── Quote block ── */
+    .campaign-quote { border-left: 3px solid var(--brand-accent); padding-left: var(--space-md); margin: 0; }
+    .campaign-quote p { font-size: var(--text-lg); font-style: italic; font-family: 'Newsreader', Georgia, serif; color: var(--text-primary); line-height: 1.6; margin: 0 0 0.5rem 0; }
+    .campaign-quote cite { font-size: var(--text-xs); font-style: normal; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
+    @media (max-width: 768px) { .ig-band { padding: var(--space-md); } }
+</style>
+</head>
+
+<body class="page-crisis">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header" id="smart-header">
+        <div class="container header-grid">
+            <a aria-label="Suicide Prevention India Foundation Home" class="brand-logo" href="/">
+                <img alt="" aria-hidden="true" class="nav-mark" height="73" src="/assets/images/spif-mark.webp" width="42" />
+                <div class="nav-text">
+                    <span class="nav-text-main">Suicide Prevention</span>
+                    <span class="nav-text-sub">India Foundation</span>
+                </div>
+            </a>
+
+            <nav aria-label="Primary Navigation" class="main-navigation hidden-mobile">
+                <ul class="nav-menu flex gap-lg m-0 p-0">
+                    <li class="nav-item has-dropdown">
+                        <button aria-expanded="false" aria-haspopup="menu" class="nav-link">Get Help <span aria-hidden="true" class="material-symbols-rounded drop-icon">expand_more</span></button>
+                        <div class="dropdown-wrapper">
+                            <ul class="dropdown-menu">
+                                <li><a href="/i-am-feeling-suicidal">I am overwhelmed</a></li>
+                                <li><a href="/i-know-someone-suicidal">I am worried for someone</a></li>
+                                <li><a href="/helpline-directory">Helpline Directory</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <button aria-expanded="false" aria-haspopup="menu" class="nav-link">Learn <span aria-hidden="true" class="material-symbols-rounded drop-icon">expand_more</span></button>
+                        <div class="dropdown-wrapper">
+                            <ul class="dropdown-menu">
+                                <li><a href="/about-suicide">Understanding Suicide</a></li>
+                                <li><a href="/self-harm">Self-Harm (NSSI)</a></li>
+                                <li><a href="/survivor-suicide-loss">Survivor of Loss</a></li>
+                                <li><a href="/survivor-suicide-attempt">Survivor of Attempt</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <button aria-expanded="false" aria-haspopup="menu" class="nav-link">Resources <span aria-hidden="true" class="material-symbols-rounded drop-icon">expand_more</span></button>
+                        <div class="dropdown-wrapper">
+                            <ul class="dropdown-menu">
+                                <li><a href="/resources/how-to-create-a-safety-plan">Create a Safety Plan</a></li>
+                                <li><a href="/resources/suicide-prevention-101">Suicide Prevention 101</a></li>
+                                <li><a href="/resources/how-to-help-yourself-as-a-survivor">Help Yourself as a Survivor</a></li>
+                                <li><a href="/resources/glossary">Glossary of Terms</a></li>
+                                <li class="view-all"><a href="/resources">View All Resources</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <button aria-expanded="false" aria-haspopup="menu" class="nav-link">Programs <span aria-hidden="true" class="material-symbols-rounded drop-icon">expand_more</span></button>
+                        <div class="dropdown-wrapper">
+                            <ul class="dropdown-menu">
+                                <li><a href="/prevent-suicide">Training Hub Overview</a></li>
+                                <li><a href="/gatekeeper">Gatekeeper Training</a></li>
+                                <li><a href="/workplace">Workplace Support</a></li>
+                                <li><a href="/educational-institutions">Campus Frameworks</a></li>
+                                <li><a href="/mhp">Clinical Training (MHP)</a></li>
+                                <li><a href="/circle-of-protection">Circle of Protection</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <button aria-expanded="false" aria-haspopup="menu" class="nav-link">About <span aria-hidden="true" class="material-symbols-rounded drop-icon">expand_more</span></button>
+                        <div class="dropdown-wrapper">
+                            <ul class="dropdown-menu">
+                                <li><a href="/about">Our Mission</a></li>
+                                <li><a href="/blog">Blog &amp; News</a></li>
+                                <li><a href="/faqs">FAQs</a></li>
+                                <li><a href="/contact">Contact Us</a></li>
+                                <li><a href="/get-involved">Volunteer</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions flex items-center gap-sm">
+                <button aria-label="Toggle Dark Mode" aria-pressed="false" class="theme-toggle-btn flex" title="Toggle Theme">
+                    <span aria-hidden="true" class="material-symbols-rounded theme-icon-light">light_mode</span>
+                    <span aria-hidden="true" class="material-symbols-rounded theme-icon-dark">dark_mode</span>
+                </button>
+                <a class="btn btn--ghost hidden-mobile font-bold" href="/donate">Donate</a>
+                <a class="btn btn--emergency btn--call-mobile" href="tel:14416">
+                    <span aria-hidden="true" class="material-symbols-rounded">phone_in_talk</span>
+                    <span>Call 14416</span>
+                </a>
+                <button aria-expanded="false" aria-label="Open Mobile Menu" class="menu-toggle-btn">
+                    <span aria-hidden="true" class="material-symbols-rounded">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+<main class="main-offset" id="main-content">
+<section aria-label="Campaign introduction" class="section-hero bg-base py-xl text-center">
+<div class="container max-w-md mx-auto flex flex-col items-center">
+<div class="partnership-badge mb-sm">
+<span aria-hidden="true" class="material-symbols-rounded text-brand-primary" style="font-size: 1.1rem;">photo_camera</span>
+                    <span>SPIF × Instagram Partnership</span>
+                </div>
+<h1 class="display-text mb-md text-primary">Circle of <span class="text-gradient">Protection</span></h1>
+<p class="lead-text text-secondary m-0 max-w-prose">
+                    A national campaign for India's adolescents and young adults — building conversations around the protective factors that form a circle of safety: resilience, help-seeking, social connectedness, and digital well-being.
+                </p>
+</div>
+</section>
+
+<section aria-labelledby="context-heading" class="py-xl bg-subtle border-y-subtle">
+<div class="container">
+<div class="section-header text-center mb-xl">
+<h2 class="heading-secondary text-primary mb-sm" id="context-heading">Why This Campaign Exists</h2>
+<p class="lead-text text-secondary m-0">India faces a growing mental health crisis among its youngest citizens. These realities are the reason Circle of Protection exists.</p>
+</div>
+<div class="cop-stat-grid max-w-md mx-auto">
+<div class="stat-item">
+<div class="stat-item__number" style="font-size: 1.8rem;">Digital Distress</div>
+<div class="stat-item__label">Adolescents and young adults are increasingly vulnerable to digital pressure and social isolation.</div>
+</div>
+<div class="stat-item">
+<div class="stat-item__number">8 in 10</div>
+<div class="stat-item__label">People contemplating suicide give verbal or nonverbal warning signs.</div>
+</div>
+<div class="stat-item">
+<div class="stat-item__number" style="font-size: 1.8rem;">The Solution</div>
+<div class="stat-item__label">Early intervention and building emotional resilience can drastically reduce crisis risk.</div>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="campaign-heading" class="py-xl bg-base">
+<div class="container">
+<div class="section-header text-center mb-xl">
+<h2 class="heading-secondary text-primary mb-sm" id="campaign-heading">What the Campaign Does</h2>
+<p class="lead-text text-secondary m-0">Timed around World Mental Health Day and World Suicide Prevention Day, the campaign meets young people where they already are — online.</p>
+</div>
+<div class="max-w-md mx-auto flex flex-col gap-lg">
+<blockquote class="campaign-quote">
+<p>"These protective factors form a circle of protection around us and keep us safe and secure."</p>
+<cite>— Circle of Protection, SPIF × Instagram</cite>
+</blockquote>
+<p class="text-base text-secondary leading-relaxed m-0">
+                        Rather than focusing solely on crisis intervention, Circle of Protection takes a proactive approach — fostering conversations about the everyday factors that build mental resilience before a crisis point is reached. The campaign addresses adverse childhood experiences (ACE), childhood trauma, and digital well-being alongside positive themes like social connectedness and help-seeking behaviour.
+                    </p>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="factors-heading" class="py-xl bg-subtle border-y-subtle">
+<div class="container">
+<div class="section-header text-center mb-xl">
+<h2 class="heading-secondary text-primary mb-sm" id="factors-heading">Explore The Protective Factors</h2>
+<p class="lead-text text-secondary m-0">These are the themes at the heart of the campaign. Select a topic to read our evidence-based toolkit and learn how to build your own circle of protection.</p>
+</div>
+<div class="factor-grid max-w-md mx-auto">
+<a href="/resources/how-to-build-resilience" class="factor-card hover-lift">
+<div class="factor-card__icon">
+<span aria-hidden="true" class="material-symbols-rounded">self_improvement</span>
+</div>
+<div class="factor-card__title">Resilience</div>
+<p class="factor-card__desc">Building the capacity to recover from setbacks and adapt to difficult circumstances — a core attribute that protects against crisis.</p>
+</a>
+<a href="/resources/help-seeking" class="factor-card hover-lift">
+<div class="factor-card__icon">
+<span aria-hidden="true" class="material-symbols-rounded">support_agent</span>
+</div>
+<div class="factor-card__title">Help-Seeking</div>
+<p class="factor-card__desc">Normalising the act of reaching out — to friends or professionals — and removing the stigma that stops young people from asking for support.</p>
+</a>
+<a href="/resources/social-connectedness" class="factor-card hover-lift">
+<div class="factor-card__icon">
+<span aria-hidden="true" class="material-symbols-rounded">group</span>
+</div>
+<div class="factor-card__title">Social Connectedness</div>
+<p class="factor-card__desc">Strong relationships with family, peers, and community are among the most powerful buffers against suicidal ideation.</p>
+</a>
+<a href="/resources/digital-wellbeing" class="factor-card hover-lift">
+<div class="factor-card__icon">
+<span aria-hidden="true" class="material-symbols-rounded">devices</span>
+</div>
+<div class="factor-card__title">Digital Well-Being</div>
+<p class="factor-card__desc">Helping young people navigate online pressures safely and building healthy digital habits to protect their focus and mood.</p>
+</a>
+<a href="/resources/looking-after-your-health" class="factor-card hover-lift">
+<div class="factor-card__icon">
+<span aria-hidden="true" class="material-symbols-rounded">favorite</span>
+</div>
+<div class="factor-card__title">Self-Care</div>
+<p class="factor-card__desc">Prioritising personal mental health and physical well-being as an active, ongoing practice — not just a response to distress.</p>
+</a>
+<a href="/resources/introduction-to-aces" class="factor-card hover-lift">
+<div class="factor-card__icon">
+<span aria-hidden="true" class="material-symbols-rounded">healing</span>
+</div>
+<div class="factor-card__title">Trauma Awareness</div>
+<p class="factor-card__desc">Acknowledging adverse childhood experiences (ACE) openly, reducing shame, and encouraging early trauma-informed support.</p>
+</a>
+</div>
+
+<div class="text-center mt-xl">
+    <a href="/resources" class="btn btn--ghost">Explore Full Resource Hub</a>
+</div>
+
+</div>
+</section>
+
+<section aria-label="Follow the campaign on Instagram" class="py-xl bg-base">
+<div class="container">
+<div class="max-w-md mx-auto">
+<div class="ig-band">
+<span aria-hidden="true" class="material-symbols-rounded text-brand-primary" style="font-size: 2.5rem;">photo_camera</span>
+<div class="ig-band__handle">@suicidepreventionindia</div>
+<p class="ig-band__sub">Follow SPIF on Instagram for campaign content, protective factor conversations, survivor stories, and mental health resources for young India.</p>
+<a aria-label="Follow SPIF on Instagram" class="btn btn--primary mt-sm" href="https://www.instagram.com/suicidepreventionindia/" rel="noopener" target="_blank">
+<span aria-hidden="true" class="material-symbols-rounded">open_in_new</span>
+                            Follow the Campaign
+                        </a>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-label="Immediate Support" class="py-xl bg-subtle border-t-subtle">
+    <div class="container">
+        <div class="bg-surface p-xl border-radius-xl shadow-premium border-subtle max-w-md mx-auto text-center flex flex-col items-center relative overflow-hidden">
+            <span aria-hidden="true" class="material-symbols-rounded icon-bg absolute opacity-5 text-brand-emergency" style="font-size: 200px; bottom: -40px; right: -40px;">live_help</span>
+            <span class="badge-minimal text-brand-emergency mb-xs relative z-10">24/7 Monitored Safe Harbors</span>
+            <h3 class="text-2xl font-bold text-primary mb-sm relative z-10">Need to talk to someone right now?</h3>
+            <p class="text-base text-secondary leading-relaxed mb-lg relative z-10">You don't have to go through this alone. Free, confidential support is available 24/7.</p>
+            <div class="flex gap-sm flex-wrap justify-center w-full relative z-10">
+                <a class="btn btn--emergency" href="/i-am-feeling-suicidal">Immediate Help Desk</a>
+                <a class="btn btn--ghost" href="tel:14416">Call Tele-MANAS: 14416</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="site-footer bg-subtle border-t-subtle py-lg pb-0 no-print" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid grid gap-lg mb-lg">
+
+                <div class="footer-brand flex flex-col">
+                    <a aria-label="Suicide Prevention India Foundation Home" class="brand-logo mb-md" href="/">
+                        <img alt="" aria-hidden="true" class="nav-mark" height="73" src="/assets/images/spif-mark.webp" width="42"/>
+                        <div class="nav-text">
+                            <span class="nav-text-main">Suicide Prevention</span>
+                            <span class="nav-text-sub">India Foundation</span>
+                        </div>
+                    </a>
+                    <p class="text-sm text-secondary leading-relaxed mb-md max-w-xs">Building a nationwide circle of protection through empathy, awareness, and systematic action.</p>
+                    <div class="social-links flex gap-sm text-muted">
+                        <a aria-label="LinkedIn" href="https://www.linkedin.com/company/suicide-prevention-india-foundation-spif/" rel="noopener" target="_blank"><span aria-hidden="true" class="material-symbols-rounded">link</span></a>
+                        <a aria-label="Instagram" href="https://www.instagram.com/suicidepreventionindia" rel="noopener" target="_blank"><span aria-hidden="true" class="material-symbols-rounded">photo_camera</span></a>
+                        <a aria-label="Facebook" href="https://www.facebook.com/SuicidePreventionIndiaFoundation" rel="noopener" target="_blank"><span aria-hidden="true" class="material-symbols-rounded">groups</span></a>
+                        <a aria-label="YouTube" href="https://www.youtube.com/@suicidepreventionindiafoun3477" rel="noopener" target="_blank"><span aria-hidden="true" class="material-symbols-rounded">play_circle</span></a>
+                    </div>
+                </div>
+
+                <details class="footer-col" open="">
+                    <summary class="footer-heading font-semibold text-xs uppercase tracking-wide text-brand-emergency mb-md">24/7 Emergency Help</summary>
+                    <ul class="footer-links flex flex-col gap-xs text-sm text-secondary p-0 m-0">
+                        <li><a class="font-semibold text-primary" href="tel:14416">Tele-MANAS: 14416</a></li>
+                        <li><a class="font-semibold text-primary" href="tel:18005990019">KIRAN: 1800-599-0019</a></li>
+                        <li><a href="/helpline-directory">Full Directory</a></li>
+                    </ul>
+                </details>
+
+                <details class="footer-col" open="">
+                    <summary class="footer-heading font-semibold text-xs uppercase tracking-wide text-primary mb-md">Understanding Suicide</summary>
+                    <ul class="footer-links flex flex-col gap-xs text-sm text-secondary p-0 m-0">
+                        <li><a href="/about-suicide">About Suicide</a></li>
+                        <li><a href="/self-harm">Self-Harm (NSSI)</a></li>
+                        <li><a href="/survivor-suicide-loss">Survivor of Loss</a></li>
+                        <li><a href="/survivor-suicide-attempt">Survivor of Attempt</a></li>
+                        <li><a href="/i-am-feeling-suicidal">I am overwhelmed</a></li>
+                        <li><a href="/i-know-someone-suicidal">I am worried for someone</a></li>
+                    </ul>
+                </details>
+
+                <details class="footer-col" open="">
+                    <summary class="footer-heading font-semibold text-xs uppercase tracking-wide text-primary mb-md">Resources &amp; Guides</summary>
+                    <ul class="footer-links flex flex-col gap-xs text-sm text-secondary p-0 m-0">
+                        <li><a class="font-semibold text-primary" href="/resources">All Resources</a></li>
+                        <li><a href="/resources/how-to-create-a-safety-plan">Create a Safety Plan</a></li>
+                        <li><a href="/resources/how-to-create-a-hope-box">Create a Hope Box</a></li>
+                        <li><a href="/resources/suicide-prevention-101">Suicide Prevention 101</a></li>
+                        <li><a href="/gatekeeper">Gatekeeper Training</a></li>
+                        <li><a href="/circle-of-protection">Circle of Protection</a></li>
+                    </ul>
+                </details>
+
+                <details class="footer-col" open="">
+                    <summary class="footer-heading font-semibold text-xs uppercase tracking-wide text-primary mb-md">About &amp; Legal</summary>
+                    <ul class="footer-links flex flex-col gap-xs text-sm text-secondary p-0 m-0">
+                        <li><a href="/about">Our Mission</a></li>
+                        <li><a class="font-semibold text-primary" href="/blog">All Blog Posts</a></li>
+                        <li><a href="/faqs">FAQs</a></li>
+                        <li><a href="/get-involved">Volunteer</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a class="font-semibold text-primary" href="/donate">Donate</a></li>
+                        <li class="mt-xs"><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/disclaimer">Legal Disclaimer</a></li>
+                        <li><a href="/equal-opportunity-policy">Equal Opportunity Policy</a></li>
+                    </ul>
+                </details>
+
+            </div>
+
+            <div class="footer-bottom border-t-subtle py-md text-sm text-muted flex flex-between flex-wrap gap-sm">
+                <p class="m-0 font-medium max-w-md">
+                    Registered Section-8 Non-Profit. 80G Tax Exempt.<br/>
+                    <span class="text-xs mt-xxs block"><a href="/privacy-policy" class="text-secondary hover-text-primary">Privacy Policy</a> &bull; <a href="/disclaimer" class="text-secondary hover-text-primary">Disclaimer</a> &bull; <a href="/equal-opportunity-policy" class="text-secondary hover-text-primary">Equal Opportunity</a></span><br/>
+                    <strong>Important:</strong> SPIF does not provide direct crisis intervention. Please call a state helpline if you need immediate support.
+                </p>
+                <p class="m-0 self-end">© 2026 Suicide Prevention India Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<script defer="" src="/assets/js/main.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,415 @@
+{
+  "trailingSlash": "never",
+  "globalHeaders": {
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "DENY",
+    "Cross-Origin-Opener-Policy": "same-origin",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=(), display-capture=()",
+    "Content-Security-Policy": "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://www.instagram.com https://www.googletagmanager.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://static.cloudflareinsights.com https://www.google-analytics.com https://analytics.google.com; frame-src 'self' https://www.instagram.com;"
+  },
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/404.html",
+      "statusCode": 404
+    }
+  },
+  "routes": [
+    {
+      "route": "/blog/government-schemes-women-youth*",
+      "redirect": "/blog/specialized-empowerment-schemes",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/rural-safety-net*",
+      "redirect": "/blog/farmer-safety-net",
+      "statusCode": 301
+    },
+    {
+      "route": "/mhp-advanced-training*",
+      "redirect": "/mhp",
+      "statusCode": 301
+    },
+    {
+      "route": "/indias-suicide-crisis*",
+      "redirect": "/blog/suicide-crisis-india",
+      "statusCode": 301
+    },
+    {
+      "route": "/seek-help*",
+      "redirect": "/helpline-directory",
+      "statusCode": 301
+    },
+    {
+      "route": "/cgi-sys/*",
+      "redirect": "/",
+      "statusCode": 301
+    },
+    {
+      "route": "/resources/how-to-help-yourself-as-a-suicide-survivor*",
+      "redirect": "/survivor-suicide-attempt",
+      "statusCode": 301
+    },
+    {
+      "route": "/resources/how-to-help-yourself-when*",
+      "redirect": "/resources/how-to-help-yourself-when-feeling-suicidal",
+      "statusCode": 301
+    },
+    {
+      "route": "/resources/cta-how-to-create-a-hope-box*",
+      "redirect": "/resources/how-to-create-a-hope-box",
+      "statusCode": 301
+    },
+    {
+      "route": "/assets/docs/cta-looking-after-your-health.pdf",
+      "redirect": "/resources/cta-looking-after-your-health",
+      "statusCode": 301
+    },
+    {
+      "route": "/assets/downloads/spif-helpline-directory.pdf",
+      "redirect": "/helpline-directory",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/de-escalation-vocabulary*",
+      "redirect": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/suicide-iceberg-model*",
+      "redirect": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/gender-suicide-paradox-india*",
+      "redirect": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/minority-stress-frameworks*",
+      "redirect": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/mental-healthcare-act-2017-impact*",
+      "redirect": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/geographic-variations-public-health*",
+      "redirect": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "route": "/resources/lost-a-loved-one-to-suicide*",
+      "redirect": "/survivor-suicide-loss",
+      "statusCode": 301
+    },
+    {
+      "route": "/maintenance",
+      "redirect": "/",
+      "statusCode": 301
+    },
+    {
+      "route": "/anurag-khanna*",
+      "redirect": "/blog",
+      "statusCode": 301
+    },
+    {
+      "route": "/media*",
+      "redirect": "/blog",
+      "statusCode": 301
+    },
+    {
+      "route": "/portfolio/help-seeking*",
+      "redirect": "/blog/why-india-needs-24-7-suicide-helplines",
+      "statusCode": 301
+    },
+    {
+      "route": "/trivialising-someones-suicidal-ideation*",
+      "redirect": "/blog/trivialising-suicidal-ideation",
+      "statusCode": 301
+    },
+    {
+      "route": "/understanding-non-suicidal-self-injury*",
+      "redirect": "/blog/understanding-nssi",
+      "statusCode": 301
+    },
+    {
+      "route": "/egoistic-suicide*",
+      "redirect": "/blog/egoistic-suicide",
+      "statusCode": 301
+    },
+    {
+      "route": "/altruistic-suicide*",
+      "redirect": "/blog/altruistic-suicide",
+      "statusCode": 301
+    },
+    {
+      "route": "/intersectionality-and-suicide*",
+      "redirect": "/blog/intersectionality-and-suicide",
+      "statusCode": 301
+    },
+    {
+      "route": "/suicide-crisis-in-india*",
+      "redirect": "/blog/suicide-crisis-india",
+      "statusCode": 301
+    },
+    {
+      "route": "/impact-of-social-media-on-mental-health*",
+      "redirect": "/blog/social-media-impact",
+      "statusCode": 301
+    },
+    {
+      "route": "/help-seeking*",
+      "redirect": "/blog/why-india-needs-24-7-suicide-helplines",
+      "statusCode": 301
+    },
+    {
+      "route": "/why-india-needs-24-7-suicide-helplines*",
+      "redirect": "/helpline-directory",
+      "statusCode": 301
+    },
+    {
+      "route": "/survivor-of-suicide-attempt*",
+      "redirect": "/survivor-suicide-attempt",
+      "statusCode": 301
+    },
+    {
+      "route": "/survivor-of-suicide-loss*",
+      "redirect": "/survivor-suicide-loss",
+      "statusCode": 301
+    },
+    {
+      "route": "/education*",
+      "redirect": "/educational-institutions",
+      "statusCode": 301
+    },
+    {
+      "route": "/individual*",
+      "redirect": "/gatekeeper",
+      "statusCode": 301
+    },
+    {
+      "route": "/gatekeeper-old*",
+      "redirect": "/gatekeeper",
+      "statusCode": 301
+    },
+    {
+      "route": "/about-spif*",
+      "redirect": "/about",
+      "statusCode": 301
+    },
+    {
+      "route": "/equal-opportunities-policy*",
+      "redirect": "/equal-opportunity-policy",
+      "statusCode": 301
+    },
+    {
+      "route": "/privacy-policy-*",
+      "redirect": "/privacy-policy",
+      "statusCode": 301
+    },
+    {
+      "route": "/spif-privacy-policy*",
+      "redirect": "/privacy-policy",
+      "statusCode": 301
+    },
+    {
+      "route": "/terms-of-use*",
+      "redirect": "/disclaimer",
+      "statusCode": 301
+    },
+    {
+      "route": "/faqs-copy-*",
+      "redirect": "/faqs",
+      "statusCode": 301
+    },
+    {
+      "route": "/all-blogs*",
+      "redirect": "/blog",
+      "statusCode": 301
+    },
+    {
+      "route": "/sshout*",
+      "redirect": "/circle-of-protection",
+      "statusCode": 301
+    },
+    {
+      "route": "/digital-well-being*",
+      "redirect": "/resources/digital-wellbeing",
+      "statusCode": 301
+    },
+    {
+      "route": "/homepage*",
+      "redirect": "/",
+      "statusCode": 301
+    },
+    {
+      "route": "/sample-page*",
+      "redirect": "/",
+      "statusCode": 301
+    },
+    {
+      "route": "/product-category/*",
+      "redirect": "/",
+      "statusCode": 301
+    },
+    {
+      "route": "/portfolio-category/*",
+      "redirect": "/resources",
+      "statusCode": 301
+    },
+    {
+      "route": "/portfolio-tags/*",
+      "redirect": "/resources",
+      "statusCode": 301
+    },
+    {
+      "route": "/portfolio*",
+      "redirect": "/resources",
+      "statusCode": 301
+    },
+    {
+      "route": "/type/*",
+      "redirect": "/blog",
+      "statusCode": 301
+    },
+    {
+      "route": "/category/*",
+      "redirect": "/blog",
+      "statusCode": 301
+    },
+    {
+      "route": "/tag/*",
+      "redirect": "/blog",
+      "statusCode": 301
+    },
+    {
+      "route": "/author/*",
+      "redirect": "/authors",
+      "statusCode": 301
+    },
+    {
+      "route": "/workshop-*",
+      "redirect": "/prevent-suicide",
+      "statusCode": 301
+    },
+    {
+      "route": "/pathfinder*",
+      "redirect": "/prevent-suicide",
+      "statusCode": 301
+    },
+    {
+      "route": "/courses*",
+      "redirect": "/prevent-suicide",
+      "statusCode": 301
+    },
+    {
+      "route": "/donation-*",
+      "redirect": "/donate",
+      "statusCode": 301
+    },
+    {
+      "route": "/donor-*",
+      "redirect": "/donate",
+      "statusCode": 301
+    },
+    {
+      "route": "/https:*",
+      "redirect": "/",
+      "statusCode": 301
+    },
+    {
+      "route": "/qpr-gatekeeper-training-webinar*",
+      "redirect": "/gatekeeper",
+      "statusCode": 301
+    },
+    {
+      "route": "/mental-health-professionals-directory*",
+      "redirect": "/helpline-directory",
+      "statusCode": 301
+    },
+    {
+      "route": "/loved-one*",
+      "redirect": "/i-know-someone-suicidal",
+      "statusCode": 301
+    },
+    {
+      "route": "/shop*",
+      "redirect": "/",
+      "statusCode": 301
+    },
+    {
+      "route": "/cart*",
+      "redirect": "/",
+      "statusCode": 301
+    },
+    {
+      "route": "/wp-content/uploads/2020/10/POSH-Policy-SPIF-2020.pdf",
+      "redirect": "/equal-opportunity-policy",
+      "statusCode": 301
+    },
+    {
+      "route": "/wp-content/uploads/2021/09/suicidal.png",
+      "redirect": "/i-am-feeling-suicidal",
+      "statusCode": 301
+    },
+    {
+      "route": "/index.php",
+      "redirect": "/",
+      "statusCode": 301
+    },
+    {
+      "route": "/wp-*",
+      "redirect": "/",
+      "statusCode": 301
+    },
+    {
+      "route": "/20*",
+      "redirect": "/",
+      "statusCode": 301
+    },
+    {
+      "route": "/professionals*",
+      "redirect": "/mhp",
+      "statusCode": 301
+    },
+    {
+      "route": "/pro-bono*",
+      "redirect": "/mhp",
+      "statusCode": 301
+    },
+    {
+      "route": "/instructor*",
+      "redirect": "/about",
+      "statusCode": 301
+    },
+    {
+      "route": "/training*",
+      "redirect": "/prevent-suicide",
+      "statusCode": 301
+    },
+    {
+      "route": "/how-to-guide*",
+      "redirect": "/resources",
+      "statusCode": 301
+    },
+    {
+      "route": "/analysing-the-*",
+      "redirect": "/blog",
+      "statusCode": 301
+    },
+    {
+      "route": "/prevent-suicide-now*",
+      "redirect": "/prevent-suicide",
+      "statusCode": 301
+    },
+    {
+      "route": "/qprt*",
+      "redirect": "/prevent-suicide",
+      "statusCode": 301
+    }
+  ]
+}

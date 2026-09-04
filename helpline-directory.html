@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html data-theme="system" lang="en-IN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpline Directory | Find Help Near You | SPIF</title>
+<meta content="A directory of free, 24/7 national mental health helplines, state services, and verified professional support across India. Available in 20+ languages." name="description"/>
+<meta content="index, follow" name="robots"/>
+<meta content="#fafaf9" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="#0f172a" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<meta content="Helpline Directory | SPIF" property="og:title"/>
+<meta content="Access free 24/7 national mental health helplines and verified crisis support services across India." property="og:description"/>
+<meta content="https://spif.in/assets/images/about-suicide-spif.jpg" property="og:image"/>
+<meta content="https://spif.in/helpline-directory" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="Suicide Prevention India Foundation" property="og:site_name"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Helpline Directory | SPIF" name="twitter:title"/>
+<meta content="Find immediate mental health support through verified 24/7 helplines across India." name="twitter:description"/>
+<meta content="https://spif.in/assets/images/about-suicide-spif.jpg" name="twitter:image"/>
+<meta content="en_IN" property="og:locale"/>
+<link href="https://spif.in/helpline-directory" rel="canonical"/>
+
+<script>
+    (function() {
+        var saved = localStorage.getItem('spif-theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "India Mental Health Helpline Directory",
+  "description": "Verified mental health and suicide prevention helplines across India",
+  "itemListElement": [
+    {
+      "@type": "ContactPoint",
+      "name": "Tele-MANAS",
+      "telephone": "14416",
+      "contactType": "Mental health crisis support",
+      "areaServed": "IN",
+      "availableLanguage": ["Hindi","English","Tamil","Telugu","Marathi"]
+    },
+    {
+      "@type": "ContactPoint",
+      "name": "KIRAN Helpline",
+      "telephone": "18005990019",
+      "contactType": "Mental health support",
+      "areaServed": "IN"
+    },
+    {
+      "@type": "ContactPoint",
+      "name": "iCALL",
+      "telephone": "9152987821",
+      "contactType": "Psychosocial counseling",
+      "areaServed": "IN"
+    },
+    {
+      "@type": "ContactPoint",
+      "name": "MPower 1-on-1",
+      "telephone": "1800120820050",
+      "contactType": "Mental health support",
+      "areaServed": "IN"
+    }
+  ]
+}
+</script>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+
+<!-- 1. Critical Inline CSS Forcefield: Stops layout flashes instantly -->
+
+<!-- Fallback if user has JavaScript disabled -->
+<noscript>
+</noscript>
+
+<!-- Failsafe: If main.js fails or CDN stalls, reveal everything after 2.5 seconds -->
+<script>
+    setTimeout(function() {
+        var hiddenElements = document.querySelectorAll('[data-reveal]');
+        for (var i = 0; i < hiddenElements.length; i++) {
+            hiddenElements[i].style.opacity = '1';
+            hiddenElements[i].style.transform = 'none';
+            hiddenElements[i].style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+        }
+    }, 2500);
+</script>
+
+<!-- 2. Asynchronous Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&amp;display=swap" rel="stylesheet"/></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&amp;display=swap" rel="stylesheet"/></noscript>
+
+<!-- 3. High-Priority Image Preloads & Assets -->
+<link href="/assets/css/main.css?v=2" rel="stylesheet"/>
+<link href="/assets/images/icons/favicon.ico" rel="icon" sizes="32x32"/>
+<link href="/assets/images/icons/icon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/assets/images/icons/apple-touch-icon.png" rel="apple-touch-icon"/>
+
+<style>
+    /* Page-scoped styles — no external dependency */
+
+    /* ── Routing badge ── */
+    .routing-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-size: var(--text-xs);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--brand-accent);
+        background: color-mix(in srgb, var(--brand-accent) 10%, transparent);
+        border: 1px solid color-mix(in srgb, var(--brand-accent) 25%, transparent);
+        border-radius: var(--radius-pill);
+        padding: 0.25rem 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+    .routing-badge .material-symbols-rounded { font-size: 1rem; }
+
+    /* ── Helpline card ── */
+    .helpline-card {
+        background: var(--bg-surface);
+        border: 1px solid rgba(150,150,150,0.1);
+        border-radius: var(--radius-xl);
+        padding: var(--space-lg);
+        box-shadow: var(--shadow-premium);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    .helpline-card__header {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    .helpline-card__title {
+        font-size: var(--text-xl);
+        font-weight: 800;
+        color: var(--text-primary);
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+    }
+    .helpline-card__operator {
+        font-size: var(--text-xs);
+        font-weight: 600;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    .helpline-card__how {
+        font-size: var(--text-sm);
+        color: var(--text-secondary);
+        line-height: 1.65;
+        border-left: 2px solid var(--brand-accent);
+        padding-left: var(--space-sm);
+        margin-top: 0.25rem;
+    }
+    .helpline-card__numbers {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.25rem;
+    }
+    .helpline-card__numbers a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.75rem 1.25rem;
+        background: var(--brand-primary);
+        color: var(--text-on-brand, #fff);
+        border-radius: var(--radius-pill);
+        font-size: var(--text-sm);
+        font-weight: 700;
+        box-shadow: var(--shadow-sm);
+        transition: background var(--transition-fast), transform var(--transition-fast);
+        text-decoration: none;
+    }
+    @media (hover: hover) {
+        .helpline-card__numbers a:hover {
+            background: var(--brand-primary-hover);
+            transform: translateY(-2px);
+        }
+        .helpline-card__numbers a.num-secondary:hover {
+            background: color-mix(in srgb, var(--brand-primary) 8%, transparent);
+        }
+    }
+    .helpline-card__numbers a .material-symbols-rounded { font-size: 1.1rem; }
+
+    /* toll-free secondary number */
+    .helpline-card__numbers a.num-secondary {
+        background: transparent;
+        color: var(--brand-primary);
+        border: 1.5px solid var(--brand-primary);
+        box-shadow: none;
+    }
+
+    /* ── Language pill list ── */
+    .lang-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: 0.5rem;
+    }
+    .lang-pill {
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        background: var(--bg-subtle);
+        border: 1px solid rgba(150,150,150,0.15);
+        border-radius: var(--radius-pill);
+        padding: 0.2rem 0.6rem;
+    }
+
+    /* ── State card ── */
+    .state-card {
+        background: var(--bg-surface);
+        border: 1px solid rgba(150,150,150,0.1);
+        border-radius: var(--radius-lg);
+        padding: var(--space-md);
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .state-card__state {
+        font-size: var(--text-xs);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--brand-primary);
+    }
+    .state-card__name {
+        font-size: var(--text-md);
+        font-weight: 700;
+        color: var(--text-primary);
+        line-height: 1.25;
+    }
+    .state-card__operator {
+        font-size: var(--text-xs);
+        color: var(--text-muted);
+        font-weight: 500;
+    }
+    .state-card__desc {
+        font-size: var(--text-sm);
+        color: var(--text-secondary);
+        line-height: 1.6;
+    }
+    .state-card__cta {
+        margin-top: auto;
+        padding-top: 0.5rem;
+    }
+    .state-card__cta a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.65rem 1.1rem;
+        background: var(--brand-primary);
+        color: var(--text-on-brand, #fff);
+        border-radius: var(--radius-pill);
+        font-size: var(--text-xs);
+        font-weight: 700;
+        text-decoration: none;
+        transition: background var(--transition-fast), transform var(--transition-fast);
+    }
+    @media (hover: hover) {
+        .state-card__cta a:hover {
+            background: var(--brand-primary-hover);
+            transform: translateY(-2px);
+        }
+    }
+    .state-card__cta a .material-symbols-rounded { font-size: 1rem; }
+
+    /* ── State grid ── */
+    .state-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--space-md);
+    }
+
+    /* ── Info callout box ── */
+    .info-callout {
+        background: color-mix(in srgb, var(--brand-primary) 6%, var(--bg-subtle));
+        border: 1px solid color-mix(in srgb, var(--brand-primary) 18%, transparent);
+        border-radius: var(--radius-lg);
+        padding: var(--space-md);
+        display: flex;
+        gap: var(--space-sm);
+        align-items: flex-start;
+    }
+    .info-callout .material-symbols-rounded {
+        color: var(--brand-primary);
+        font-size: 1.4rem;
+        flex-shrink: 0;
+        margin-top: 0.1rem;
+    }
+    .info-callout p {
+        font-size: var(--text-sm);
+        color: var(--text-secondary);
+        line-height: 1.6;
+        margin: 0;
+    }
+    .info-callout p strong { color: var(--text-primary); }
+
+    /* ── Section divider label ── */
+    .section-label {
+        font-size: var(--text-xs);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-muted);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: var(--space-md);
+    }
+    .section-label::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: rgba(150,150,150,0.15);
+    }
+
+    /* ── Stack layout for national cards ── */
+    .national-stack {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    /* ── Also mobile: shrink outer padding ── */
+    @media (max-width: 480px) {
+        .helpline-card { padding: var(--space-md); }
+    }
+</style>
+</head>
+
+<body class="page-crisis">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header" id="smart-header">
+        <div class="container header-grid">
+            <a aria-label="Suicide Prevention India Foundation Home" class="brand-logo" href="/">
+                <img alt="" aria-hidden="true" class="nav-mark" height="73" src="/assets/images/spif-mark.webp" width="42" />
+                <div class="nav-text">
+                    <span class="nav-text-main">Suicide Prevention</span>
+                    <span class="nav-text-sub">India Foundation</span>
+                </div>
+            </a>
+
+            <nav aria-label="Primary Navigation" class="main-navigation hidden-mobile">
+                <ul class="nav-menu flex gap-lg m-0 p-0">
+                    <li class="nav-item has-dropdown">
+                        <button aria-expanded="false" aria-haspopup="menu" class="nav-link">Get Help <span aria-hidden="true" class="material-symbols-rounded drop-icon">expand_more</span></button>
+                        <div class="dropdown-wrapper">
+                            <ul class="dropdown-menu">
+                                <li><a href="/i-am-feeling-suicidal">I am overwhelmed</a></li>
+                                <li><a href="/i-know-someone-suicidal">I am worried for someone</a></li>
+                                <li><a href="/helpline-directory">Helpline Directory</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <button aria-expanded="false" aria-haspopup="menu" class="nav-link">Learn <span aria-hidden="true" class="material-symbols-rounded drop-icon">expand_more</span></button>
+                        <div class="dropdown-wrapper">
+                            <ul class="dropdown-menu">
+                                <li><a href="/about-suicide">Understanding Suicide</a></li>
+                                <li><a href="/self-harm">Self-Harm (NSSI)</a></li>
+                                <li><a href="/survivor-suicide-loss">Survivor of Loss</a></li>
+                                <li><a href="/survivor-suicide-attempt">Survivor of Attempt</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <button aria-expanded="false" aria-haspopup="menu" class="nav-link">Resources <span aria-hidden="true" class="material-symbols-rounded drop-icon">expand_more</span></button>
+                        <div class="dropdown-wrapper">
+                            <ul class="dropdown-menu">
+                                <li><a href="/resources/how-to-create-a-safety-plan">Create a Safety Plan</a></li>
+                                <li><a href="/resources/suicide-prevention-101">Suicide Prevention 101</a></li>
+                                <li><a href="/resources/how-to-help-yourself-as-a-survivor">Help Yourself as a Survivor</a></li>
+                                <li><a href="/resources/glossary">Glossary of Terms</a></li>
+                                <li class="view-all"><a href="/resources">View All Resources</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <button aria-expanded="false" aria-haspopup="menu" class="nav-link">Programs <span aria-hidden="true" class="material-symbols-rounded drop-icon">expand_more</span></button>
+                        <div class="dropdown-wrapper">
+                            <ul class="dropdown-menu">
+                                <li><a href="/prevent-suicide">Training Hub Overview</a></li>
+                                <li><a href="/gatekeeper">Gatekeeper Training</a></li>
+                                <li><a href="/workplace">Workplace Support</a></li>
+                                <li><a href="/educational-institutions">Campus Frameworks</a></li>
+                                <li><a href="/mhp">Clinical Training (MHP)</a></li>
+                                <li><a href="/circle-of-protection">Circle of Protection</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <button aria-expanded="false" aria-haspopup="menu" class="nav-link">About <span aria-hidden="true" class="material-symbols-rounded drop-icon">expand_more</span></button>
+                        <div class="dropdown-wrapper">
+                            <ul class="dropdown-menu">
+                                <li><a href="/about">Our Mission</a></li>
+                                <li><a href="/blog">Blog &amp; News</a></li>
+                                <li><a href="/faqs">FAQs</a></li>
+                                <li><a href="/contact">Contact Us</a></li>
+                                <li><a href="/get-involved">Volunteer</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions flex items-center gap-sm">
+                <button aria-label="Toggle Dark Mode" aria-pressed="false" class="theme-toggle-btn flex" title="Toggle Theme">
+                    <span aria-hidden="true" class="material-symbols-rounded theme-icon-light">light_mode</span>
+                    <span aria-hidden="true" class="material-symbols-rounded theme-icon-dark">dark_mode</span>
+                </button>
+                <a class="btn btn--ghost hidden-mobile font-bold" href="/donate">Donate</a>
+                <a class="btn btn--emergency btn--call-mobile" href="tel:14416">
+                    <span aria-hidden="true" class="material-symbols-rounded">phone_in_talk</span>
+                    <span>Call 14416</span>
+                </a>
+                <button aria-expanded="false" aria-label="Open Mobile Menu" class="menu-toggle-btn">
+                    <span aria-hidden="true" class="material-symbols-rounded">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+<main class="main-offset" id="main-content">
+<!-- ═══════════════════════════════════════════
+             HERO
+        ═══════════════════════════════════════════ -->
+<section aria-label="Welcome" class="section-hero bg-base py-xl text-center">
+<div class="container max-w-md mx-auto flex flex-col items-center">
+<span aria-hidden="true" class="material-symbols-rounded text-brand-primary mb-sm" style="font-size: 3.5rem;">map</span>
+<h1 class="display-text mb-md text-primary">Find Help <span class="text-gradient">Near You.</span></h1>
+<p class="lead-text text-secondary m-0 max-w-prose">
+                    All helplines listed here are free and available 24 hours a day, 7 days a week. No matter which state or Union Territory you are in, you will be routed to someone who speaks your language.
+                </p>
+<div class="flex flex-wrap gap-sm mt-xs justify-center" style="margin-top: 1.75rem;">
+<a aria-label="Download helpline directory as PDF" class="btn btn--ghost" download="SPIF-Helpline-Directory.pdf" href="/assets/downloads/spif-helpline-directory.pdf">
+<span aria-hidden="true" class="material-symbols-rounded">download</span>
+<span>Download Reference Card</span>
+</a>
+</div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+             KEY REASSURANCE CALLOUT
+        ═══════════════════════════════════════════ -->
+<section aria-label="Language and region note" class="bg-base pb-xl">
+<div class="container max-w-md mx-auto">
+<div class="info-callout">
+<span aria-hidden="true" class="material-symbols-rounded">translate</span>
+<p>
+<strong>No language or location barrier.</strong> Every national helpline below uses an automated routing system. When you call, it detects your telecom circle or asks you to select your state — then connects you directly to a counsellor in your region who speaks your language. You do not need to find a separate local number.
+                    </p>
+</div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+             NATIONAL CENTRALISED HELPLINES
+        ═══════════════════════════════════════════ -->
+<section aria-labelledby="national-heading" class="py-xl bg-subtle border-b-subtle">
+<div class="container">
+<div class="section-header text-center mb-xl">
+<h2 class="heading-secondary text-primary mb-sm" id="national-heading">National Government Helplines</h2>
+<p class="lead-text text-secondary m-0">
+                        Free, centralised networks that automatically connect you to your state's mental health professionals.
+                    </p>
+</div>
+<div class="max-w-md mx-auto national-stack">
+<!-- Tele-MANAS -->
+<article aria-labelledby="card-telemanas-title" class="helpline-card">
+<div class="routing-badge">
+<span aria-hidden="true" class="material-symbols-rounded">hub</span>
+                            Auto-routes to your state · 36 States &amp; UTs
+                        </div>
+<div class="helpline-card__header">
+<h3 class="helpline-card__title" id="card-telemanas-title">Tele-MANAS</h3>
+<p class="helpline-card__operator">Ministry of Health &amp; Family Welfare (MoHFW) · Supervised by NIMHANS, Bengaluru</p>
+</div>
+<p class="helpline-card__how">
+                            Tele-MANAS operates <strong>53 dedicated cells</strong> spread across all 36 States and Union Territories. When you call, the system automatically routes you to your designated state cell — no manual searching required. Counselling is available in <strong>20 regional languages</strong> chosen by each state. For severe distress, cells link directly with the District Mental Health Programme (DMHP) or local psychiatric emergency services for in-person support.
+                        </p>
+<div class="helpline-card__numbers">
+<a aria-label="Call Tele-MANAS on 14416" class="btn--emergency" href="tel:14416">
+<span aria-hidden="true" class="material-symbols-rounded">call</span> 14416
+                            </a>
+<a aria-label="Call Tele-MANAS toll-free on 1800-891-4416" class="num-secondary" href="tel:18008914416">
+<span aria-hidden="true" class="material-symbols-rounded">call</span> 1800-891-4416 <span style="font-size:0.7em;font-weight:500;">(Toll-Free)</span>
+</a>
+</div>
+</article>
+
+<!-- KIRAN -->
+<article aria-labelledby="card-kiran-title" class="helpline-card">
+<div class="routing-badge">
+<span aria-hidden="true" class="material-symbols-rounded">hub</span>
+                            Select your state &amp; language on call · 13 languages
+                        </div>
+<div class="helpline-card__header">
+<h3 class="helpline-card__title" id="card-kiran-title">KIRAN</h3>
+<p class="helpline-card__operator">Dept. of Empowerment of Persons with Disabilities · Ministry of Social Justice &amp; Empowerment</p>
+</div>
+<p class="helpline-card__how">
+                            KIRAN is a multi-tier system for early screening, psychological first-aid, and distress management. When you call, you choose your preferred language and state. The backend is powered by <strong>25 prominent national and state institutions</strong> — including 8 National Institutes — staffed by hundreds of government-appointed clinical psychologists, rehabilitation psychologists, and psychiatrists. KIRAN coordinates closely with the Tele-MANAS framework to optimise nationwide mental healthcare delivery.
+                        </p>
+<div aria-label="Languages available on KIRAN" class="lang-pills">
+<span class="lang-pill">Hindi</span>
+<span class="lang-pill">English</span>
+<span class="lang-pill">Tamil</span>
+<span class="lang-pill">Telugu</span>
+<span class="lang-pill">Marathi</span>
+<span class="lang-pill">Kannada</span>
+<span class="lang-pill">Malayalam</span>
+<span class="lang-pill">Bengali</span>
+<span class="lang-pill">Gujarati</span>
+<span class="lang-pill">Odia</span>
+<span class="lang-pill">Punjabi</span>
+<span class="lang-pill">Assamese</span>
+<span class="lang-pill">Urdu</span>
+</div>
+<div class="helpline-card__numbers">
+<a aria-label="Call KIRAN toll-free on 1800-599-0019" class="btn--emergency" href="tel:18005990019">
+<span aria-hidden="true" class="material-symbols-rounded">call</span> 1800-599-0019 <span style="font-size:0.7em;font-weight:500;">(Toll-Free)</span>
+</a>
+</div>
+</article>
+
+<!-- NHM 104 -->
+<article aria-labelledby="card-nhm-title" class="helpline-card">
+<div class="routing-badge">
+<span aria-hidden="true" class="material-symbols-rounded">hub</span>
+                            Connects to your state's mental health cell
+                        </div>
+<div class="helpline-card__header">
+<h3 class="helpline-card__title" id="card-nhm-title">National Health Helpline — 104</h3>
+<p class="helpline-card__operator">National Health Mission (NHM) · Operated by individual State Governments</p>
+</div>
+<p class="helpline-card__how">
+                            The 104 helpline is the established local infrastructure adopted by the majority of state governments, including Assam, Chhattisgarh, Jharkhand, Odisha, Punjab, Rajasthan, and Uttarakhand. While it serves as a broader medical advisory channel, dialing <strong>104</strong> in these states connects you directly to specialised state-run mental health counselling cells, psycho-social first-aid desks, or local district medical authorities.
+                        </p>
+<div class="helpline-card__numbers">
+<a aria-label="Call National Health Helpline on 104" href="tel:104">
+<span aria-hidden="true" class="material-symbols-rounded">call</span> 104
+                            </a>
+</div>
+</article>
+</div><!-- /national-stack -->
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+             VERIFIED INSTITUTIONAL HELPLINES
+        ═══════════════════════════════════════════ -->
+<section aria-labelledby="institutional-heading" class="py-xl bg-base border-b-subtle">
+    <div class="container">
+        <div class="section-header text-center mb-xl">
+            <h2 class="heading-secondary text-primary mb-sm" id="institutional-heading">Verified Institutional Helplines</h2>
+            <p class="lead-text text-secondary m-0">
+                Highly reliable, professionally staffed support networks operated by premier educational institutes and established foundations.
+            </p>
+        </div>
+        <div class="max-w-lg mx-auto">
+            <div class="grid action-grid gap-md">
+                
+                <!-- iCALL -->
+                <article class="card-action bg-surface p-lg border-radius-xl shadow-sm hover-lift border-subtle flex flex-col relative overflow-hidden">
+                    <h3 class="text-xl font-bold text-primary mb-xxs">iCALL (TISS)</h3>
+                    <p class="text-xs text-muted uppercase tracking-wide font-bold mb-sm">Tata Institute of Social Sciences</p>
+                    <p class="text-sm text-secondary mb-md">Professional support for emotional and psychological well-being. Mon-Sat, 10 AM to 8 PM.</p>
+                    <a aria-label="Call iCALL on 9152987821" class="btn btn--primary w-full mt-auto" href="tel:9152987821">
+                        <span aria-hidden="true" class="material-symbols-rounded">call</span> <span>91529 87821</span>
+                    </a>
+                </article>
+                
+                <!-- MPower -->
+                <article class="card-action bg-surface p-lg border-radius-xl shadow-sm hover-lift border-subtle flex flex-col relative overflow-hidden">
+                    <h3 class="text-xl font-bold text-primary mb-xxs">MPower 1-on-1</h3>
+                    <p class="text-xs text-muted uppercase tracking-wide font-bold mb-sm">24/7 Mental Health Support</p>
+                    <p class="text-sm text-secondary mb-md">Supported by the Govt. of Maharashtra. Free, confidential clinical guidance.</p>
+                    <a aria-label="Call MPower toll-free on 1800120820050" class="btn btn--primary w-full mt-auto" href="tel:1800120820050">
+                        <span aria-hidden="true" class="material-symbols-rounded">call</span> <span>1800-120-820050</span>
+                    </a>
+                </article>
+
+                <!-- Vandrevala Foundation -->
+                <article class="card-action bg-surface p-lg border-radius-xl shadow-sm hover-lift border-subtle flex flex-col relative overflow-hidden">
+                    <h3 class="text-xl font-bold text-primary mb-xxs">Vandrevala Foundation</h3>
+                    <p class="text-xs text-muted uppercase tracking-wide font-bold mb-sm">24/7 Crisis Intervention</p>
+                    <p class="text-sm text-secondary mb-md">Round-the-clock support for anxiety, panic attacks, and severe psychological distress.</p>
+                    <a aria-label="Call Vandrevala on 9999666555" class="btn btn--primary w-full mt-auto" href="tel:9999666555">
+                        <span aria-hidden="true" class="material-symbols-rounded">call</span> <span>9999 666 555</span>
+                    </a>
+                </article>
+
+                <!-- Mann Talks -->
+                <article class="card-action bg-surface p-lg border-radius-xl shadow-sm hover-lift border-subtle flex flex-col relative overflow-hidden">
+                    <h3 class="text-xl font-bold text-primary mb-xxs">Mann Talks</h3>
+                    <p class="text-xs text-muted uppercase tracking-wide font-bold mb-sm">Empathetic Counseling</p>
+                    <p class="text-sm text-secondary mb-md">Trained mental health professionals providing psychosocial support. 9 AM to 8 PM, 7 days.</p>
+                    <a aria-label="Call Mann Talks on 8686139139" class="btn btn--primary w-full mt-auto" href="tel:8686139139">
+                        <span aria-hidden="true" class="material-symbols-rounded">call</span> <span>8686 139 139</span>
+                    </a>
+                </article>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+             STATE-SPECIFIC HELPLINES
+        ═══════════════════════════════════════════ -->
+<section aria-labelledby="state-heading" class="py-xl bg-subtle border-b-subtle">
+<div class="container">
+<div class="section-header text-center mb-xl">
+<h2 class="heading-secondary text-primary mb-sm" id="state-heading">State Government Helplines</h2>
+<p class="lead-text text-secondary m-0">
+                        These helplines are owned, funded, and managed directly by state governments or premier government health institutes.
+                    </p>
+</div>
+<div class="max-w-md mx-auto">
+<div class="section-label">Verified state-specific numbers</div>
+<div class="state-grid">
+<!-- Gujarat -->
+<article aria-labelledby="card-gujarat-title" class="state-card">
+<div class="state-card__state">Gujarat</div>
+<h3 class="state-card__name" id="card-gujarat-title">Jeevan Aastha Helpline</h3>
+<p class="state-card__operator">Gujarat Police · Government of Gujarat</p>
+<p class="state-card__desc">
+                                An official initiative operated directly by the Gujarat Police. Fully government-funded and staffed by professional psychological counsellors, it provides immediate, accountable crisis de-escalation from within official state police infrastructure.
+                            </p>
+<div class="state-card__cta">
+<a aria-label="Call Jeevan Aastha Helpline toll-free on 1800-233-3330" href="tel:18002333330">
+<span aria-hidden="true" class="material-symbols-rounded">call</span>
+                                    1800-233-3330
+                                    <span style="font-size:0.7em;font-weight:500;">(Toll-Free, 24/7)</span>
+</a>
+</div>
+</article>
+
+<!-- Kerala -->
+<article aria-labelledby="card-kerala-title" class="state-card">
+<div class="state-card__state">Kerala</div>
+<h3 class="state-card__name" id="card-kerala-title">Anuyatra Help Desk</h3>
+<p class="state-card__operator">Social Justice Dept. &amp; Kerala Social Security Mission · Govt. of Kerala</p>
+<p class="state-card__desc">
+                                An official initiative by the State Government of Kerala providing dedicated mental health counselling, crisis assistance, and developmental disability support through a structured government framework.
+                            </p>
+<div class="state-card__cta">
+<a aria-label="Call Anuyatra Help Desk toll-free on 1800-120-1001" href="tel:18001201001">
+<span aria-hidden="true" class="material-symbols-rounded">call</span>
+                                    1800-120-1001
+                                    <span style="font-size:0.7em;font-weight:500;">(Toll-Free)</span>
+</a>
+</div>
+</article>
+</div><!-- /state-grid -->
+</div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+             TRUST IN A PERSON
+        ═══════════════════════════════════════════ -->
+<section aria-label="Alternative support options" class="py-xl bg-base">
+<div class="container">
+<div class="bg-surface p-xl border-radius-xl border-subtle text-center shadow-premium max-w-md mx-auto flex flex-col items-center relative overflow-hidden">
+<span aria-hidden="true" class="material-symbols-rounded icon-bg absolute opacity-5 text-brand-accent" style="font-size: 180px; bottom: -40px; right: -40px;">forum</span>
+<span aria-hidden="true" class="material-symbols-rounded text-brand-accent mb-sm relative z-10" style="font-size: 2.5rem;">forum</span>
+<h2 class="text-lg font-bold text-primary mb-xs relative z-10">Talk to Someone You Trust</h2>
+<p class="text-sm text-secondary mb-0 max-w-sm mx-auto leading-relaxed relative z-10">Reaching out doesn't always have to start with a helpline. A friend, a family member, a teacher — anyone you feel safe with. You do not have to carry everything alone.</p>
+</div>
+</div>
+</section>
+
+<!-- UX FIX: New Wikipedia Traffic Catch (Content Funnel) -->
+<section aria-label="Additional Resources" class="py-xl bg-subtle border-t-subtle">
+    <div class="container max-w-lg mx-auto">
+        <div class="section-header text-center mb-xl">
+            <h2 class="heading-secondary text-primary mb-sm">Continue Learning</h2>
+            <p class="lead-text text-secondary m-0">Explore our free public mental health toolkits and read the latest research on our blog.</p>
+        </div>
+        <div class="grid action-grid gap-md">
+            <article class="card-action bg-surface p-lg border-radius-xl shadow-sm border-subtle hover-lift flex flex-col items-start relative overflow-hidden">
+                <span aria-hidden="true" class="material-symbols-rounded icon-bg absolute opacity-5 text-brand-primary" style="font-size: 160px; right: -20px; top: -20px;">menu_book</span>
+                <span aria-hidden="true" class="material-symbols-rounded text-brand-primary mb-sm relative z-10" style="font-size: 2.5rem;">menu_book</span>
+                <h3 class="text-xl font-bold text-primary mb-xs relative z-10">Guides &amp; Toolkits</h3>
+                <p class="text-sm text-secondary mb-lg relative z-10 leading-relaxed">Access free, downloadable safety plans, emotional first aid worksheets, and self-care resources.</p>
+                <a class="btn btn--ghost mt-auto w-full relative z-10" href="/resources">
+                    Explore Resources <span aria-hidden="true" class="material-symbols-rounded">arrow_forward</span>
+                </a>
+            </article>
+            <article class="card-action bg-surface p-lg border-radius-xl shadow-sm border-subtle hover-lift flex flex-col items-start relative overflow-hidden">
+                <span aria-hidden="true" class="material-symbols-rounded icon-bg absolute opacity-5 text-brand-accent" style="font-size: 160px; right: -20px; top: -20px;">article</span>
+                <span aria-hidden="true" class="material-symbols-rounded text-brand-accent mb-sm relative z-10" style="font-size: 2.5rem;">article</span>
+                <h3 class="text-xl font-bold text-primary mb-xs relative z-10">SPIF Blog</h3>
+                <p class="text-sm text-secondary mb-lg relative z-10 leading-relaxed">Read survivor narratives, deep dives into mental health research, and organizational updates from our team.</p>
+                <a class="btn btn--ghost mt-auto w-full relative z-10" href="/blog">
+                    Read the Blog <span aria-hidden="true" class="material-symbols-rounded">arrow_forward</span>
+                </a>
+            </article>
+        </div>
+    </div>
+</section>
+
+</main>
+
+    <footer class="site-footer bg-subtle border-t-subtle py-lg pb-0 no-print" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid grid gap-lg mb-lg">
+
+                <div class="footer-brand flex flex-col">
+                    <a aria-label="Suicide Prevention India Foundation Home" class="brand-logo mb-md" href="/">
+                        <img alt="" aria-hidden="true" class="nav-mark" height="73" src="/assets/images/spif-mark.webp" width="42"/>
+                        <div class="nav-text">
+                            <span class="nav-text-main">Suicide Prevention</span>
+                            <span class="nav-text-sub">India Foundation</span>
+                        </div>
+                    </a>
+                    <p class="text-sm text-secondary leading-relaxed mb-md max-w-xs">Building a nationwide circle of protection through empathy, awareness, and systematic action.</p>
+                    <div class="social-links flex gap-sm text-muted">
+                        <a aria-label="LinkedIn" href="https://www.linkedin.com/company/suicide-prevention-india-foundation-spif/" rel="noopener" target="_blank"><span aria-hidden="true" class="material-symbols-rounded">link</span></a>
+                        <a aria-label="Instagram" href="https://www.instagram.com/suicidepreventionindia" rel="noopener" target="_blank"><span aria-hidden="true" class="material-symbols-rounded">photo_camera</span></a>
+                        <a aria-label="Facebook" href="https://www.facebook.com/SuicidePreventionIndiaFoundation" rel="noopener" target="_blank"><span aria-hidden="true" class="material-symbols-rounded">groups</span></a>
+                        <a aria-label="YouTube" href="https://www.youtube.com/@suicidepreventionindiafoun3477" rel="noopener" target="_blank"><span aria-hidden="true" class="material-symbols-rounded">play_circle</span></a>
+                    </div>
+                </div>
+
+                <details class="footer-col" open="">
+                    <summary class="footer-heading font-semibold text-xs uppercase tracking-wide text-brand-emergency mb-md">24/7 Emergency Help</summary>
+                    <ul class="footer-links flex flex-col gap-xs text-sm text-secondary p-0 m-0">
+                        <li><a class="font-semibold text-primary" href="tel:14416">Tele-MANAS: 14416</a></li>
+                        <li><a class="font-semibold text-primary" href="tel:18005990019">KIRAN: 1800-599-0019</a></li>
+                        <li><a href="/helpline-directory">Full Directory</a></li>
+                    </ul>
+                </details>
+
+                <details class="footer-col" open="">
+                    <summary class="footer-heading font-semibold text-xs uppercase tracking-wide text-primary mb-md">Understanding Suicide</summary>
+                    <ul class="footer-links flex flex-col gap-xs text-sm text-secondary p-0 m-0">
+                        <li><a href="/about-suicide">About Suicide</a></li>
+                        <li><a href="/self-harm">Self-Harm (NSSI)</a></li>
+                        <li><a href="/survivor-suicide-loss">Survivor of Loss</a></li>
+                        <li><a href="/survivor-suicide-attempt">Survivor of Attempt</a></li>
+                        <li><a href="/i-am-feeling-suicidal">I am overwhelmed</a></li>
+                        <li><a href="/i-know-someone-suicidal">I am worried for someone</a></li>
+                    </ul>
+                </details>
+
+                <details class="footer-col" open="">
+                    <summary class="footer-heading font-semibold text-xs uppercase tracking-wide text-primary mb-md">Resources &amp; Guides</summary>
+                    <ul class="footer-links flex flex-col gap-xs text-sm text-secondary p-0 m-0">
+                        <li><a class="font-semibold text-primary" href="/resources">All Resources</a></li>
+                        <li><a href="/resources/how-to-create-a-safety-plan">Create a Safety Plan</a></li>
+                        <li><a href="/resources/how-to-create-a-hope-box">Create a Hope Box</a></li>
+                        <li><a href="/resources/suicide-prevention-101">Suicide Prevention 101</a></li>
+                        <li><a href="/gatekeeper">Gatekeeper Training</a></li>
+                        <li><a href="/circle-of-protection">Circle of Protection</a></li>
+                    </ul>
+                </details>
+
+                <details class="footer-col" open="">
+                    <summary class="footer-heading font-semibold text-xs uppercase tracking-wide text-primary mb-md">About &amp; Legal</summary>
+                    <ul class="footer-links flex flex-col gap-xs text-sm text-secondary p-0 m-0">
+                        <li><a href="/about">Our Mission</a></li>
+                        <li><a class="font-semibold text-primary" href="/blog">All Blog Posts</a></li>
+                        <li><a href="/faqs">FAQs</a></li>
+                        <li><a href="/get-involved">Volunteer</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a class="font-semibold text-primary" href="/donate">Donate</a></li>
+                        <li class="mt-xs"><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/disclaimer">Legal Disclaimer</a></li>
+                        <li><a href="/equal-opportunity-policy">Equal Opportunity Policy</a></li>
+                    </ul>
+                </details>
+
+            </div>
+
+            <div class="footer-bottom border-t-subtle py-md text-sm text-muted flex flex-between flex-wrap gap-sm">
+                <p class="m-0 font-medium max-w-md">
+                    Registered Section-8 Non-Profit. 80G Tax Exempt.<br/>
+                    <span class="text-xs mt-xxs block"><a href="/privacy-policy" class="text-secondary hover-text-primary">Privacy Policy</a> &bull; <a href="/disclaimer" class="text-secondary hover-text-primary">Disclaimer</a> &bull; <a href="/equal-opportunity-policy" class="text-secondary hover-text-primary">Equal Opportunity</a></span><br/>
+                    <strong>Important:</strong> SPIF does not provide direct crisis intervention. Please call a state helpline if you need immediate support.
+                </p>
+                <p class="m-0 self-end">© 2026 Suicide Prevention India Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+<script defer="" src="/assets/js/main.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en-IN" data-theme="system">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | SPIF</title>
+
+    <meta name="description" content="The page you were looking for has moved or no longer exists. Find what you need below.">
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+    <meta property="og:title" content="Page Not Found | SPIF">
+    <meta property="og:description" content="The page you were looking for has moved. Find what you need from SPIF's directory below.">
+    <meta property="og:image" content="https://spif.in/assets/images/logo/spif-logo-light.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Suicide Prevention India Foundation">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Page Not Found | SPIF">
+    <meta name="twitter:image" content="https://spif.in/assets/images/logo/spif-logo-light.jpg">
+
+    <!-- Capture 404 path immediately, before anything else -->
+    <script>
+        window.__404_path     = window.location.pathname + window.location.search;
+        window.__404_referrer = document.referrer || '(direct)';
+    </script>
+
+    <!-- Theme init (no FOUC) -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('spif-theme');
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.setAttribute('data-theme',
+                (saved === 'dark' || (!saved && prefersDark)) ? 'dark' : 'light'
+            );
+        })();
+    </script>
+
+    <!-- LCP Fix & Performance (Optimized Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet"/>
+    </noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+    </noscript>
+
+    <link rel="stylesheet" href="/assets/css/main.css?v=2">
+    <link rel="icon" href="/assets/images/icons/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/assets/images/icons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/images/icons/apple-touch-icon.png">
+
+    <style>
+        .error-page-hero {
+            text-align: center;
+            padding: var(--space-xl) 0 var(--space-lg);
+        }
+        .error-icon-ring {
+            width: 88px; height: 88px;
+            border-radius: 50%;
+            background: var(--bg-subtle);
+            border: 1px solid rgba(150,150,150,0.12);
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto var(--space-md);
+        }
+        /* Did-you-mean suggestion card */
+        .suggestion-card {
+            display: none;
+            background: var(--bg-surface);
+            border: 2px solid var(--brand-primary);
+            border-radius: var(--radius-xl);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-lg);
+            text-align: center;
+            box-shadow: var(--shadow-premium);
+        }
+        .suggestion-card.is-visible { display: block; }
+        .suggestion-label {
+            font-size: var(--text-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 700;
+            color: var(--brand-primary);
+            margin-bottom: var(--space-xs);
+        }
+        .suggestion-path {
+            font-family: 'Courier New', monospace;
+            font-size: var(--text-sm);
+            background: var(--bg-subtle);
+            border-radius: var(--radius-sm);
+            padding: 2px 8px;
+            color: var(--text-muted);
+            display: inline-block;
+            margin-bottom: var(--space-sm);
+            word-break: break-all;
+        }
+        .suggestion-card h2 {
+            font-size: var(--text-lg);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-xs);
+        }
+        .suggestion-card p {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-md);
+        }
+
+        .sitemap-section {
+            background: var(--bg-surface);
+            border: 1px solid rgba(150,150,150,0.1);
+            border-radius: var(--radius-xl);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-sm);
+        }
+        .sitemap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: var(--space-md);
+            margin-top: var(--space-md);
+            text-align: left;
+        }
+        .sitemap-col h4 {
+            font-size: var(--text-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: var(--space-xs);
+            color: var(--brand-primary);
+            font-weight: 700;
+        }
+        .sitemap-col a {
+            display: flex; align-items: center; gap: 6px;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: var(--text-sm);
+            transition: color var(--transition-fast);
+            border-radius: var(--radius-sm);
+            padding: 2px 0;
+        }
+        .sitemap-col a:hover { color: var(--brand-primary); }
+        .sitemap-col a .material-symbols-rounded { font-size: 1rem; opacity: 0.6; }
+        .cta-row {
+            display: flex; gap: var(--space-sm);
+            flex-wrap: wrap; justify-content: center;
+            margin-bottom: var(--space-xl);
+        }
+        .report-row {
+            display: flex; align-items: center; justify-content: center;
+            gap: var(--space-xs); flex-wrap: wrap;
+            margin-bottom: var(--space-lg);
+        }
+        .copy-btn {
+            font-size: var(--text-xs); font-weight: 600;
+            color: var(--text-muted); cursor: pointer;
+            background: var(--bg-subtle);
+            border: 1px solid rgba(150,150,150,0.2);
+            border-radius: var(--radius-pill);
+            padding: 4px 12px;
+            transition: all var(--transition-fast);
+            display: inline-flex; align-items: center; gap: 4px;
+        }
+        .copy-btn:hover { color: var(--brand-primary); border-color: var(--brand-primary); }
+        .copy-btn .material-symbols-rounded { font-size: 0.9rem; }
+        .broken-url-display {
+            font-family: 'Courier New', monospace;
+            font-size: var(--text-xs);
+            color: var(--text-muted);
+            background: var(--bg-subtle);
+            border-radius: var(--radius-sm);
+            padding: 3px 8px;
+            display: inline-block;
+            word-break: break-all;
+        }
+        .divider { height: 1px; background: rgba(150,150,150,0.1); margin: var(--space-xl) 0; border: none; }
+        
+        .developer-note {
+            text-align: center;
+            max-width: 65ch;
+            margin: 0 auto var(--space-xl) auto;
+            padding: var(--space-md);
+            background: var(--bg-surface);
+            border-radius: var(--radius-md);
+            border: 1px dashed rgba(150,150,150,0.3);
+        }
+    </style>
+</head>
+
+<body class="page-error" style="display:flex; flex-direction:column; min-height:100vh;">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="site-header" id="smart-header">
+        <div class="container header-grid">
+            <a aria-label="Suicide Prevention India Foundation Home" class="brand-logo" href="/">
+                <img alt="" aria-hidden="true" class="nav-mark" height="73" src="/assets/images/spif-mark.webp" width="42" />
+                <div class="nav-text">
+                    <span class="nav-text-main">Suicide Prevention</span>
+                    <span class="nav-text-sub">India Foundation</span>
+                </div>
+            </a>
+
+            <nav aria-label="Primary Navigation" class="main-navigation hidden-mobile">
+                <ul class="nav-menu flex gap-lg m-0 p-0">
+                    <li class="nav-item has-dropdown">
+                        <button aria-expanded="false" aria-haspopup="menu" class="nav-link">Get Help <span aria-hidden="true" class="material-symbols-rounded drop-icon">expand_more</span></button>
+                        <div class="dropdown-wrapper">
+                            <ul class="dropdown-menu">
+                                <li><a href="/i-am-feeling-suicidal">I am overwhelmed</a></li>
+                                <li><a href="/i-know-someone-suicidal">I am worried for someone</a></li>
+                                <li><a href="/helpline-directory">Helpline Directory</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <button aria-expanded="false" aria-haspopup="menu" class="nav-link">Learn <span aria-hidden="true" class="material-symbols-rounded drop-icon">expand_more</span></button>
+                        <div class="dropdown-wrapper">
+                            <ul class="dropdown-menu">
+                                <li><a href="/about-suicide">Understanding Suicide</a></li>
+                                <li><a href="/self-harm">Self-Harm (NSSI)</a></li>
+                                <li><a href="/survivor-suicide-loss">Survivor of Loss</a></li>
+                                <li><a href="/survivor-suicide-attempt">Survivor of Attempt</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <button aria-expanded="false" aria-haspopup="menu" class="nav-link">Resources <span aria-hidden="true" class="material-symbols-rounded drop-icon">expand_more</span></button>
+                        <div class="dropdown-wrapper">
+                            <ul class="dropdown-menu">
+                                <li><a href="/resources/how-to-create-a-safety-plan">Create a Safety Plan</a></li>
+                                <li><a href="/resources/suicide-prevention-101">Suicide Prevention 101</a></li>
+                                <li><a href="/resources/how-to-help-yourself-as-a-survivor">Help Yourself as a Survivor</a></li>
+                                <li><a href="/resources/glossary">Glossary of Terms</a></li>
+                                <li class="view-all"><a href="/resources">View All Resources</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <button aria-expanded="false" aria-haspopup="menu" class="nav-link">Programs <span aria-hidden="true" class="material-symbols-rounded drop-icon">expand_more</span></button>
+                        <div class="dropdown-wrapper">
+                            <ul class="dropdown-menu">
+                                <li><a href="/prevent-suicide">Training Hub Overview</a></li>
+                                <li><a href="/gatekeeper">Gatekeeper Training</a></li>
+                                <li><a href="/workplace">Workplace Support</a></li>
+                                <li><a href="/educational-institutions">Campus Frameworks</a></li>
+                                <li><a href="/mhp">Clinical Training (MHP)</a></li>
+                                <li><a href="/circle-of-protection">Circle of Protection</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <button aria-expanded="false" aria-haspopup="menu" class="nav-link">About <span aria-hidden="true" class="material-symbols-rounded drop-icon">expand_more</span></button>
+                        <div class="dropdown-wrapper">
+                            <ul class="dropdown-menu">
+                                <li><a href="/about">Our Mission</a></li>
+                                <li><a href="/blog">Blog &amp; News</a></li>
+                                <li><a href="/faqs">FAQs</a></li>
+                                <li><a href="/contact">Contact Us</a></li>
+                                <li><a href="/get-involved">Volunteer</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions flex items-center gap-sm">
+                <button aria-label="Toggle Dark Mode" class="theme-toggle-btn flex" title="Toggle Theme">
+                    <span aria-hidden="true" class="material-symbols-rounded theme-icon-light">light_mode</span>
+                    <span aria-hidden="true" class="material-symbols-rounded theme-icon-dark">dark_mode</span>
+                </button>
+                <a class="btn btn--ghost hidden-mobile font-bold" href="/donate">Donate</a>
+                <a class="btn btn--emergency btn--call-mobile" href="tel:14416">
+                    <span aria-hidden="true" class="material-symbols-rounded">phone_in_talk</span>
+                    <span>Call 14416</span>
+                </a>
+                <button aria-expanded="false" aria-label="Open Mobile Menu" class="menu-toggle-btn">
+                    <span aria-hidden="true" class="material-symbols-rounded">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" class="main-offset" style="flex:1; padding-bottom: 0;">
+        <section class="container max-w-md mx-auto" style="width:100%;">
+
+            <div class="error-page-hero">
+                <div class="error-icon-ring">
+                    <span class="material-symbols-rounded text-brand-primary" style="font-size:2.5rem;" aria-hidden="true">explore</span>
+                </div>
+                <h1 class="heading-secondary text-primary mb-sm">Still in the right place.</h1>
+                <p class="lead-text text-secondary mb-lg" style="max-width:50ch; margin-left:auto; margin-right:auto;">
+                    That link has moved — probably from our old WordPress site. Here's how to find what you're looking for.
+                </p>
+                <div class="cta-row">
+                    <a href="/" class="btn btn--primary">Go Home</a>
+                    <a href="/blog" class="btn btn--ghost">Research &amp; News</a>
+                    <a href="/resources" class="btn btn--ghost">Resource Centre</a>
+                </div>
+            </div>
+
+            <!-- Smart suggestion card — shown by JS when a match is found -->
+            <div class="suggestion-card" id="suggestion-card" role="region" aria-label="Page suggestion">
+                <p class="suggestion-label">
+                    <span class="material-symbols-rounded" style="font-size:0.9rem;vertical-align:middle;" aria-hidden="true">lightbulb</span>
+                    Did you mean?
+                </p>
+                <p class="suggestion-path" id="suggestion-broken-path"></p>
+                <h2 id="suggestion-title"></h2>
+                <p id="suggestion-desc"></p>
+                <a id="suggestion-link" href="#" class="btn btn--primary">Take me there</a>
+            </div>
+
+            <div class="sitemap-section">
+                <p class="text-xs font-bold uppercase tracking-wide text-brand-primary m-0 mb-sm">Full site directory</p>
+                <div class="sitemap-grid">
+                    <div class="sitemap-col">
+                        <h4>Get Help</h4>
+                        <a href="/i-am-feeling-suicidal"><span class="material-symbols-rounded" aria-hidden="true">favorite</span> I am overwhelmed</a>
+                        <a href="/i-know-someone-suicidal"><span class="material-symbols-rounded" aria-hidden="true">group</span> I am worried for someone</a>
+                        <a href="/helpline-directory"><span class="material-symbols-rounded" aria-hidden="true">call</span> All Helplines</a>
+                    </div>
+                    <div class="sitemap-col">
+                        <h4>Learn</h4>
+                        <a href="/about-suicide"><span class="material-symbols-rounded" aria-hidden="true">info</span> Understanding Suicide</a>
+                        <a href="/self-harm"><span class="material-symbols-rounded" aria-hidden="true">healing</span> Self-Harm (NSSI)</a>
+                        <a href="/survivor-suicide-loss"><span class="material-symbols-rounded" aria-hidden="true">sentiment_sad</span> Survivor of Loss</a>
+                        <a href="/survivor-suicide-attempt"><span class="material-symbols-rounded" aria-hidden="true">restart_alt</span> Survivor of Attempt</a>
+                    </div>
+                    <div class="sitemap-col">
+                        <h4>Programs</h4>
+                        <a href="/prevent-suicide"><span class="material-symbols-rounded" aria-hidden="true">hub</span> Training Hub</a>
+                        <a href="/gatekeeper"><span class="material-symbols-rounded" aria-hidden="true">person</span> Gatekeeper</a>
+                        <a href="/workplace"><span class="material-symbols-rounded" aria-hidden="true">corporate_fare</span> Workplace</a>
+                        <a href="/educational-institutions"><span class="material-symbols-rounded" aria-hidden="true">school</span> Campus</a>
+                        <a href="/mhp"><span class="material-symbols-rounded" aria-hidden="true">medical_services</span> Clinical</a>
+                    </div>
+                    <div class="sitemap-col">
+                        <h4>Explore</h4>
+                        <a href="/resources"><span class="material-symbols-rounded" aria-hidden="true">folder_open</span> Resource Centre</a>
+                        <a href="/blog"><span class="material-symbols-rounded" aria-hidden="true">article</span> Research &amp; News</a>
+                        <a href="/resources/how-to-create-a-safety-plan"><span class="material-symbols-rounded" aria-hidden="true">shield</span> Safety Plan</a>
+                        <a href="/resources/how-to-create-a-hope-box"><span class="material-symbols-rounded" aria-hidden="true">light_mode</span> Hope Box</a>
+                        <a href="/resources/introduction-to-aces"><span class="material-symbols-rounded" aria-hidden="true">psychology</span> Trauma &amp; ACEs</a>
+                    </div>
+                    <div class="sitemap-col">
+                        <h4>About SPIF</h4>
+                        <a href="/about"><span class="material-symbols-rounded" aria-hidden="true">account_balance</span> Our Mission</a>
+                        <a href="/circle-of-protection"><span class="material-symbols-rounded" aria-hidden="true">security</span> Circle of Protection</a>
+                        <a href="/get-involved"><span class="material-symbols-rounded" aria-hidden="true">group_add</span> Get Involved</a>
+                        <a href="/donate"><span class="material-symbols-rounded" aria-hidden="true">volunteer_activism</span> Donate</a>
+                        <a href="/faqs"><span class="material-symbols-rounded" aria-hidden="true">help</span> FAQs</a>
+                        <a href="/contact"><span class="material-symbols-rounded" aria-hidden="true">mail</span> Contact</a>
+                    </div>
+                    <div class="sitemap-col">
+                        <h4>Legal</h4>
+                        <a href="/privacy-policy"><span class="material-symbols-rounded" aria-hidden="true">policy</span> Privacy Policy</a>
+                        <a href="/disclaimer"><span class="material-symbols-rounded" aria-hidden="true">warning</span> Disclaimer</a>
+                        <a href="/equal-opportunity-policy"><span class="material-symbols-rounded" aria-hidden="true">diversity_3</span> Equal Opportunity</a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Broken URL display + copy/report -->
+            <div class="report-row">
+                <span class="text-sm text-muted">Broken URL:</span>
+                <span class="broken-url-display" id="display-path"></span>
+                <button class="copy-btn" id="copy-btn" aria-label="Copy broken URL to clipboard">
+                    <span class="material-symbols-rounded">content_copy</span> Copy
+                </button>
+                <a class="copy-btn" id="report-link" href="#" aria-label="Report broken link by email">
+                    <span class="material-symbols-rounded">flag</span> Report
+                </a>
+            </div>
+
+            <!-- Developer Note -->
+            <div class="developer-note">
+                <p class="text-sm text-secondary m-0">
+                    <strong>A personal note from the developer:</strong> SPIF is a nonprofit doing critical work, and we want this platform to be as reliable as possible. If you spot a bug, experience a glitch, or have feedback on how we can improve, please email me directly at 
+                    <a href="mailto:niranjan@adostrophe.com?cc=contact@spif.in" class="text-brand-primary font-semibold">
+                        <span aria-hidden="true" class="material-symbols-rounded" style="font-size: 1.1em; vertical-align: middle;">mail</span> niranjan@adostrophe.com
+                    </a> 
+                    (CC: contact@spif.in).
+                </p>
+            </div>
+
+        </section>
+
+        <!-- UX FIX: Inserted the standardized Lifeline Break at the absolute bottom of the main content -->
+        <section aria-label="Immediate Support" class="py-xl bg-subtle border-t-subtle mt-xl">
+            <div class="container">
+                <div class="bg-surface p-xl border-radius-xl shadow-premium border-subtle max-w-md mx-auto text-center flex flex-col items-center relative overflow-hidden">
+                    <span aria-hidden="true" class="material-symbols-rounded icon-bg absolute opacity-5 text-brand-emergency" style="font-size: 200px; bottom: -40px; right: -40px;">live_help</span>
+                    <span class="badge-minimal text-brand-emergency mb-xs relative z-10">24/7 Monitored Safe Harbors</span>
+                    <h3 class="text-2xl font-bold text-primary mb-sm relative z-10">Need to talk to someone right now?</h3>
+                    <p class="text-base text-secondary leading-relaxed mb-lg relative z-10">You don't have to go through this alone. Free, confidential support is available 24/7.</p>
+                    <div class="flex gap-sm flex-wrap justify-center w-full relative z-10">
+                        <a class="btn btn--emergency" href="/i-am-feeling-suicidal">Immediate Help Desk</a>
+                        <a class="btn btn--ghost" href="tel:14416">Call Tele-MANAS: 14416</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer bg-subtle border-t-subtle py-lg pb-0 no-print" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid grid gap-lg mb-lg">
+
+                <div class="footer-brand flex flex-col">
+                    <a aria-label="Suicide Prevention India Foundation Home" class="brand-logo mb-md" href="/">
+                        <img alt="" aria-hidden="true" class="nav-mark" height="73" src="/assets/images/spif-mark.webp" width="42"/>
+                        <div class="nav-text">
+                            <span class="nav-text-main">Suicide Prevention</span>
+                            <span class="nav-text-sub">India Foundation</span>
+                        </div>
+                    </a>
+                    <p class="text-sm text-secondary leading-relaxed mb-md max-w-xs">Building a nationwide circle of protection through empathy, awareness, and systematic action.</p>
+                    <div class="social-links flex gap-sm text-muted">
+                        <a aria-label="LinkedIn" href="https://www.linkedin.com/company/suicide-prevention-india-foundation-spif/" rel="noopener" target="_blank"><span aria-hidden="true" class="material-symbols-rounded">link</span></a>
+                        <a aria-label="Instagram" href="https://www.instagram.com/suicidepreventionindia" rel="noopener" target="_blank"><span aria-hidden="true" class="material-symbols-rounded">photo_camera</span></a>
+                        <a aria-label="Facebook" href="https://www.facebook.com/SuicidePreventionIndiaFoundation" rel="noopener" target="_blank"><span aria-hidden="true" class="material-symbols-rounded">groups</span></a>
+                        <a aria-label="YouTube" href="https://www.youtube.com/@suicidepreventionindiafoun3477" rel="noopener" target="_blank"><span aria-hidden="true" class="material-symbols-rounded">play_circle</span></a>
+                    </div>
+                </div>
+
+                <details class="footer-col" open="">
+                    <summary class="footer-heading font-semibold text-xs uppercase tracking-wide text-brand-emergency mb-md">24/7 Emergency Help</summary>
+                    <ul class="footer-links flex flex-col gap-xs text-sm text-secondary p-0 m-0">
+                        <li><a class="font-semibold text-primary" href="tel:14416">Tele-MANAS: 14416</a></li>
+                        <li><a class="font-semibold text-primary" href="tel:18005990019">KIRAN: 1800-599-0019</a></li>
+                        <li><a href="/helpline-directory">Full Directory</a></li>
+                    </ul>
+                </details>
+
+                <details class="footer-col" open="">
+                    <summary class="footer-heading font-semibold text-xs uppercase tracking-wide text-primary mb-md">Understanding Suicide</summary>
+                    <ul class="footer-links flex flex-col gap-xs text-sm text-secondary p-0 m-0">
+                        <li><a href="/about-suicide">About Suicide</a></li>
+                        <li><a href="/self-harm">Self-Harm (NSSI)</a></li>
+                        <li><a href="/survivor-suicide-loss">Survivor of Loss</a></li>
+                        <li><a href="/survivor-suicide-attempt">Survivor of Attempt</a></li>
+                        <li><a href="/i-am-feeling-suicidal">I am overwhelmed</a></li>
+                        <li><a href="/i-know-someone-suicidal">I am worried for someone</a></li>
+                    </ul>
+                </details>
+
+                <details class="footer-col" open="">
+                    <summary class="footer-heading font-semibold text-xs uppercase tracking-wide text-primary mb-md">Resources &amp; Guides</summary>
+                    <ul class="footer-links flex flex-col gap-xs text-sm text-secondary p-0 m-0">
+                        <li><a class="font-semibold text-primary" href="/resources">All Resources</a></li>
+                        <li><a href="/resources/how-to-create-a-safety-plan">Create a Safety Plan</a></li>
+                        <li><a href="/resources/how-to-create-a-hope-box">Create a Hope Box</a></li>
+                        <li><a href="/resources/suicide-prevention-101">Suicide Prevention 101</a></li>
+                        <li><a href="/gatekeeper">Gatekeeper Training</a></li>
+                        <li><a href="/circle-of-protection">Circle of Protection</a></li>
+                    </ul>
+                </details>
+
+                <details class="footer-col" open="">
+                    <summary class="footer-heading font-semibold text-xs uppercase tracking-wide text-primary mb-md">About &amp; Legal</summary>
+                    <ul class="footer-links flex flex-col gap-xs text-sm text-secondary p-0 m-0">
+                        <li><a href="/about">Our Mission</a></li>
+                        <li><a class="font-semibold text-primary" href="/blog">All Blog Posts</a></li>
+                        <li><a href="/faqs">FAQs</a></li>
+                        <li><a href="/get-involved">Volunteer</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a class="font-semibold text-primary" href="/donate">Donate</a></li>
+                        <li class="mt-xs"><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/disclaimer">Legal Disclaimer</a></li>
+                        <li><a href="/equal-opportunity-policy">Equal Opportunity Policy</a></li>
+                    </ul>
+                </details>
+
+            </div>
+
+            <div class="footer-bottom border-t-subtle py-md text-sm text-muted flex flex-between flex-wrap gap-sm">
+                <p class="m-0 font-medium max-w-md">
+                    Registered Section-8 Non-Profit. 80G Tax Exempt.<br/>
+                    <span class="text-xs mt-xxs block"><a href="/privacy-policy" class="text-secondary hover-text-primary">Privacy Policy</a> &bull; <a href="/disclaimer" class="text-secondary hover-text-primary">Disclaimer</a> &bull; <a href="/equal-opportunity-policy" class="text-secondary hover-text-primary">Equal Opportunity</a></span><br/>
+                    <strong>Important:</strong> SPIF does not provide direct crisis intervention. Please call a state helpline if you need immediate support.
+                </p>
+                <p class="m-0 self-end">© 2026 Suicide Prevention India Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js?v=2" defer></script>
+
+    <script>
+    (function () {
+        'use strict';
+
+        var broken = window.__404_path || window.location.pathname;
+        var referrer = window.__404_referrer || document.referrer || '(direct)';
+
+        // ── Display broken URL ────────────────────────────────────────────
+        var displayEl = document.getElementById('display-path');
+        if (displayEl) displayEl.textContent = broken;
+
+        // ── Copy button ───────────────────────────────────────────────────
+        var copyBtn = document.getElementById('copy-btn');
+        if (copyBtn) {
+            copyBtn.addEventListener('click', function () {
+                var full = 'https://spif.in' + broken;
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(full).then(function () {
+                        copyBtn.innerHTML = '<span class="material-symbols-rounded">check</span> Copied';
+                        setTimeout(function () {
+                            copyBtn.innerHTML = '<span class="material-symbols-rounded">content_copy</span> Copy';
+                        }, 2000);
+                    });
+                }
+            });
+        }
+
+        // ── Report link (mailto pre-filled) ──────────────────────────────
+        var reportLink = document.getElementById('report-link');
+        if (reportLink) {
+            var subject = encodeURIComponent('Broken link: ' + broken);
+            var body = encodeURIComponent(
+                'Hi,\n\nI encountered a broken link on SPIF.\n\n' +
+                'Broken URL: https://spif.in' + broken + '\n' +
+                'Came from: ' + referrer + '\n\n' +
+                'Please fix this link.\n\nThank you.'
+            );
+            reportLink.href = 'mailto:contact@spif.in?subject=' + subject + '&body=' + body;
+        }
+
+        // ── localStorage 404 log ──────────────────────────────────────────
+        // Read with: JSON.parse(localStorage.getItem('spif_404_log'))
+        try {
+            var LOG_KEY = 'spif_404_log';
+            var MAX_ENTRIES = 100;
+            var existing = JSON.parse(localStorage.getItem(LOG_KEY) || '[]');
+            existing.unshift({
+                path:     broken,
+                referrer: referrer,
+                ts:       new Date().toISOString()
+            });
+            // Trim to last 100 entries
+            if (existing.length > MAX_ENTRIES) existing = existing.slice(0, MAX_ENTRIES);
+            localStorage.setItem(LOG_KEY, JSON.stringify(existing));
+        } catch (e) { /* localStorage blocked — silent fail */ }
+
+        // ── Smart URL suggestion engine ───────────────────────────────────
+        // All valid pages with title and description for the suggestion card
+        var PAGES = [
+            // Core
+            ['/', 'Home', 'Suicide Prevention India Foundation'],
+            ['/about', 'Our Mission', 'About SPIF, our founder, and our work.'],
+            ['/faqs', 'FAQs', 'Common questions about SPIF and our work.'],
+            ['/contact', 'Contact Us', 'Get in touch with the SPIF team.'],
+            ['/get-involved', 'Volunteer', 'Join SPIF\'s volunteer network.'],
+            ['/donate', 'Donate', 'Support SPIF\'s mission — 80G tax exempt.'],
+            ['/circle-of-protection', 'Circle of Protection', 'Our digital safety initiative with Instagram.'],
+
+            // Help
+            ['/i-am-feeling-suicidal', 'I am overwhelmed', 'Find immediate support and resources.'],
+            ['/i-know-someone-suicidal', 'I am worried for someone', 'How to help someone who may be struggling.'],
+            ['/helpline-directory', 'Helpline Directory', 'Free 24/7 crisis lines across India.'],
+
+            // Learn
+            ['/about-suicide', 'Understanding Suicide', 'Evidence-based information about suicide.'],
+            ['/self-harm', 'Self-Harm (NSSI)', 'Understanding non-suicidal self-injury.'],
+            ['/survivor-suicide-loss', 'Survivor of Suicide Loss', 'Support for those who have lost someone.'],
+            ['/survivor-suicide-attempt', 'Survivor of Suicide Attempt', 'Recovery resources for attempt survivors.'],
+
+            // Resources (Index & All items)
+            ['/resources', 'Resource Centre', 'Guides, protocols, and safety planning tools.'],
+            ['/resources/how-to-create-a-safety-plan', 'Create a Safety Plan', 'A step-by-step personal safety plan guide.'],
+            ['/resources/how-to-create-a-hope-box', 'Create a Hope Box', 'A coping tool for difficult moments.'],
+            ['/resources/how-to-help-someone-suicidal', 'Support Someone Suicidal', 'Practical guidance for supporters.'],
+            ['/resources/how-to-help-yourself-when-feeling-suicidal', 'Help Yourself When Suicidal', 'Grounding techniques and coping mechanisms.'],
+            ['/resources/how-to-help-someone-who-refused-professional-help', 'Helping Someone Who Refuses Help', 'Navigating resistance to clinical intervention.'],
+            ['/resources/how-to-talk-to-a-suicide-survivor', 'Talk to a Suicide Survivor', 'Compassionate communication guidance.'],
+            ['/resources/navigating-suicide-loss', 'Navigating Suicide Loss', 'A guide to processing complex grief.'],
+            ['/resources/how-to-help-yourself-as-a-survivor', 'Help Yourself as a Survivor', 'Recovery steps for suicide attempt survivors.'],
+            ['/resources/suicide-prevention-101', 'Suicide Prevention 101', 'Recognizing warning signs and asking directly.'],
+            ['/resources/preventing-self-harm-101', 'Preventing Self-Harm 101', 'Evidence-based harm reduction strategies.'],
+            ['/resources/providing-support-handbook', 'Providing Support Handbook', 'Active listening and identifying caregiver burnout.'],
+            ['/resources/mhp-handbook', 'MHP Clinical Handbook', 'A professional guide for Mental Health Professionals.'],
+            ['/resources/introduction-to-aces', 'Introduction to ACEs', 'Understanding trauma and childhood experiences.'],
+            ['/resources/how-to-support-someone-with-aces', 'Support Someone with ACEs', 'Providing trauma-informed support.'],
+            ['/resources/overcoming-childhood-trauma', 'Overcoming Childhood Trauma', 'Actionable steps to begin healing.'],
+            ['/resources/how-to-build-resilience', 'How to Build Resilience', 'Strengthening psychological muscle.'],
+            ['/resources/how-to-build-self-esteem', 'Build Self-Esteem', 'Developing a healthier relationship with yourself.'],
+            ['/resources/mindfulness', 'Practicing Mindfulness', 'Sensory grounding and nervous system regulation.'],
+            ['/resources/looking-after-your-health', 'Looking After Your Health', 'Holistic, sustainable ways to care for vitality.'],
+            ['/resources/help-seeking', 'The Power of Help-Seeking', 'Overcoming barriers to asking for help.'],
+            ['/resources/mental-health-conversation-starters', 'Conversation Starters', 'Opening up about your mental health.'],
+            ['/resources/social-connectedness', 'Social Connectedness', 'Building authentic, deep relationships.'],
+            ['/resources/digital-wellbeing', 'Digital Wellbeing', 'Setting healthy boundaries with tech.'],
+            ['/resources/digital-self-care', 'Digital Self-Care', 'Curating a digital environment that nurtures your mind.'],
+            ['/resources/positive-tech-use', 'Positive Tech Use', 'Intentional engagement for personal growth.'],
+            ['/resources/joining-a-virtual-community', 'Joining a Virtual Community', 'Finding safe online support spaces.'],
+            ['/resources/the-role-of-gatekeepers', 'The Role of Gatekeepers', 'How ordinary people save lives.'],
+            ['/resources/glossary', 'Glossary of Terms', 'Clinical and operational terminology definitions.'],
+
+            // Programs
+            ['/prevent-suicide', 'Training Hub Overview', 'SPIF\'s full suite of training programmes.'],
+            ['/gatekeeper', 'Gatekeeper Training', 'Get certified to recognise and respond to distress.'],
+            ['/workplace', 'Workplace Support', 'Training for corporate teams and HR.'],
+            ['/educational-institutions', 'Campus Frameworks', 'Training programmes for students and educators.'],
+            ['/mhp', 'Clinical Training (MHP)', 'Advanced training for mental health professionals.'],
+
+            // Blog
+            ['/blog', 'Research & News', 'Evidence-based articles and data analysis.'],
+            ['/blog/suicide-trends-india-ncrb', 'Suicide Trends in India', 'Data-driven analysis of national statistics.'],
+            ['/blog/suicide-crisis-india', 'The Suicide Crisis in India', 'Student and adolescent distress analysis.'],
+            ['/blog/farmer-safety-net', 'The Rural Safety Net', 'Protecting farmers and wage earners.'],
+            ['/blog/specialized-empowerment-schemes', 'Government Empowerment Schemes', 'Grants and support for vulnerable groups.'],
+            ['/blog/egoistic-suicide', 'Egoistic Suicide', 'Durkheim\'s theory in a modern context.'],
+            ['/blog/why-india-needs-24-7-suicide-helplines', 'Why India Needs 24/7 Helplines', 'Public health infrastructure analysis.'],
+            ['/blog/altruistic-suicide', 'Altruistic Suicide', 'Sociological models and integration.'],
+            ['/blog/intersectionality-and-suicide', 'Intersectionality and Suicide', 'How overlapping identities impact risk.'],
+            ['/blog/social-media-impact', 'Social Media and Mental Health', 'Algorithmic loops and youth distress.'],
+            ['/blog/understanding-nssi', 'Understanding NSSI', 'A clinical guide to non-suicidal self-injury.'],
+            ['/blog/trivialising-suicidal-ideation', 'Trivialising Suicidal Ideation', 'Why casual language causes real harm.'],
+
+            // Authors
+            ['/authors', 'Our Authors', 'Meet the researchers behind SPIF\'s content.'],
+            ['/authors/alisha-sethi', 'Alisha Sethi', 'SPIF Author Profile.'],
+            ['/authors/gayatri-thumboochetty', 'Gayatri Thumboochetty', 'SPIF Author Profile.'],
+            ['/authors/nelson-moses', 'Nelson Vinod Moses', 'SPIF Founder & Author Profile.'],
+            ['/authors/niranjan-ramamurthy', 'Niranjan Ramamurthy', 'SPIF Author Profile.'],
+            ['/authors/riya-mehta', 'Riya Mehta', 'SPIF Author Profile.'],
+            ['/authors/sowmya-vinjamuri', 'Sowmya Vinjamuri', 'SPIF Author Profile.'],
+
+            // Legal
+            ['/privacy-policy', 'Privacy Policy', 'Data protection and transparency.'],
+            ['/disclaimer', 'Legal Disclaimer', 'Platform limitations and crisis disclaimers.'],
+            ['/equal-opportunity-policy', 'Equal Opportunity Policy', 'Our commitment to diversity and fairness.']
+        ];
+
+        function tokenise(str) {
+            return str.toLowerCase()
+                      .replace(/[^a-z0-9]+/g, ' ')
+                      .trim()
+                      .split(/\s+/)
+                      .filter(Boolean);
+        }
+
+        function score(brokenTokens, pageUrl) {
+            var pageTokens = tokenise(pageUrl);
+            var hits = 0;
+            brokenTokens.forEach(function (t) {
+                if (t.length < 3) return; // skip noise words
+                pageTokens.forEach(function (p) {
+                    if (p === t) { hits += 2; return; }
+                    if (p.indexOf(t) !== -1 || t.indexOf(p) !== -1) hits += 1;
+                });
+            });
+            return hits;
+        }
+
+        function suggest(brokenPath) {
+            var tokens = tokenise(brokenPath);
+            if (tokens.length === 0) return null;
+
+            var best = null, bestScore = 0;
+            PAGES.forEach(function (page) {
+                var s = score(tokens, page[0]);
+                if (s > bestScore) { bestScore = s; best = page; }
+            });
+
+            // Require a minimum confidence of 2 to show the card
+            return bestScore >= 2 ? best : null;
+        }
+
+        var match = suggest(broken);
+        if (match) {
+            var card   = document.getElementById('suggestion-card');
+            var bPath  = document.getElementById('suggestion-broken-path');
+            var title  = document.getElementById('suggestion-title');
+            var desc   = document.getElementById('suggestion-desc');
+            var link   = document.getElementById('suggestion-link');
+            if (card && bPath && title && desc && link) {
+                bPath.textContent = broken;
+                title.textContent = match[1];
+                desc.textContent  = match[2];
+                link.href         = match[0];
+                card.classList.add('is-visible');
+            }
+        }
+
+        // ── Analytics: fire after page load ──────────────────────────────
+        document.addEventListener('DOMContentLoaded', function () {
+            // GA4
+            if (window.gtag) {
+                gtag('event', 'page_not_found', {
+                    page_path:        broken,
+                    referrer:         referrer,
+                    suggestion_shown: match ? match[0] : '(none)',
+                    page_title:       document.title
+                });
+            }
+            // Cloudflare Zaraz
+            if (window.zaraz) {
+                zaraz.track('404', {
+                    path:       broken,
+                    referrer:   referrer,
+                    suggestion: match ? match[0] : '(none)'
+                });
+            }
+            // Cloudflare Web Analytics beacon fires automatically — no extra code needed.
+        });
+
+    }());
+    </script>
+</body>
+</html>
